@@ -1,0 +1,157 @@
+<resources>
+
+    <!-- 网上立案       net register case=nrc -->
+    <!-- 公共 -->
+    <dimen name="nrc_header_tip_height">30dp</dimen>
+
+    <!-- 选择法院等箭头 -->
+    <dimen name="nrc_right_arrow_width">30dp</dimen>
+    <dimen name="nrc_right_arrow_height">30dp</dimen>
+    <dimen name="nrc_main_padding_left">20dp</dimen>
+    <dimen name="nrc_main_padding_right">20dp</dimen>
+    <dimen name="nrc_bottom_arrow_width">15dp</dimen>
+    <dimen name="nrc_bottom_arrow_height">8dp</dimen>
+    <!-- 公共  end -->
+
+
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_create_time_height">50dp</dimen>
+    <dimen name="nrc_court_height">50dp</dimen>
+    <dimen name="nrc_case_type_height">40dp</dimen>
+    <dimen name="nrc_applicant_height">50dp</dimen>
+    <dimen name="nrc_applicant_certificate_num_height">30dp</dimen>
+    <dimen name="nrc_applicant_certificate_type_height">30dp</dimen>
+    <dimen name="nrc_applicant_tel_height">40dp</dimen>
+    <dimen name="nrc_id_verify_height">50dp</dimen>
+    <dimen name="nrc_id_photo_height">200dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_judge_program_margin_left">30dp</dimen>
+    <!-- 网上立案       end -->
+
+
+    <!-- 网上立案  添加当事人 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_al_item_height">50dp</dimen>
+    <dimen name="nrc_al_delete_width">150dp</dimen>
+    <dimen name="nrc_al_delete_height">40dp</dimen>
+    <dimen name="nrc_al_left_tip_width">100dp</dimen>
+    <dimen name="nrc_al_padding_left">15dp</dimen>
+    <dimen name="nrc_al_padding_right">15dp</dimen>
+    <dimen name="nrc_al_bottom_height">50dp</dimen>
+    <dimen name="nrc_al_bottom_margin_top">20dp</dimen>
+    <dimen name="nrc_al_bottom_margin_bottom">20dp</dimen>
+    <dimen name="nrc_al_location_height">50dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_al_name_margin_left">20dp</dimen>
+    <dimen name="nrc_al_gender_margin_left">20dp</dimen>
+    <dimen name="nrc_al_address_margin_left">20dp</dimen>
+    <!-- 网上立案  添加当事人  end -->
+
+
+    <!-- 网上立案  添加代理人 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_aa_item_height">50dp</dimen>
+    <dimen name="nrc_aa_delete_width">150dp</dimen>
+    <dimen name="nrc_aa_delete_height">50dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_aa_base_margin">8dp</dimen>
+    <dimen name="nrc_aa_name_margin_left">20dp</dimen>
+    <dimen name="nrc_aa_gender_margin_left">20dp</dimen>
+    <dimen name="nrc_aa_address_margin_left">20dp</dimen>
+    <dimen name="nrc_aa_base_padding">10dp</dimen>
+    <!-- 网上立案  添加代理人  end -->
+
+
+    <!-- 网上立案  添加证人 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_aw_item_height">50dp</dimen>
+    <dimen name="nrc_aw_item_width">110dp</dimen>
+    <dimen name="nrc_aw_delete_width">150dp</dimen>
+    <dimen name="nrc_aw_delete_height">40dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_aw_name_margin_left">20dp</dimen>
+    <dimen name="nrc_aw_gender_margin_left">20dp</dimen>
+    <dimen name="nrc_aw_address_margin_left">20dp</dimen>
+    <!-- 网上立案  添加证人  end -->
+
+
+    <!-- 网上立案  添加起诉状 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_ai_item_height">50dp</dimen>
+    <dimen name="nrc_ai_item_width">100dp</dimen>
+    <dimen name="nrc_ai_delete_width">150dp</dimen>
+    <dimen name="nrc_ai_delete_height">40dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_ai_name_margin_left">20dp</dimen>
+    <!-- 网上立案  添加起诉状  end -->
+
+
+    <!-- 网上立案  添加证据 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_ae_base_margin">8dp</dimen>
+    <dimen name="nrc_ae_item_height">50dp</dimen>
+    <dimen name="nrc_ae_delete_width">150dp</dimen>
+    <dimen name="nrc_ae_delete_height">40dp</dimen>
+    <dimen name="nrc_ae_base_padding">10dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_ae_name_margin_left">20dp</dimen>
+    <!-- 网上立案  添加证据  end -->
+
+
+    <!-- 网上立案  其它材料 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_aom_item_height">50dp</dimen>
+    <dimen name="nrc_aom_delete_width">150dp</dimen>
+    <dimen name="nrc_aom_delete_height">40dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_aom_name_margin_left">20dp</dimen>
+    <!-- 网上立案  其它材料  end -->
+
+
+    <!-- 网上立案  基本信息 -->
+    <!-- 宽度、高度 -->
+    <dimen name="nrc_basic_item_height">48dp</dimen>
+    <dimen name="nrc_basic_list_height">20dp</dimen>
+    <dimen name="nrc_basic_bottom_height">50dp</dimen>
+    <dimen name="nrc_basic_agree_create_width">150dp</dimen>
+    <dimen name="nrc_basic_agree_create_height">40dp</dimen>
+
+    <!-- activity_nrc_basic_item_radio 宽度、高度 -->
+    <dimen name="nrc_basic_item_radio_width">18dp</dimen>
+    <dimen name="nrc_basic_item_radio_height">18dp</dimen>
+
+    <!-- margin -->
+    <dimen name="nrc_basic_agent_margin_left">15dp</dimen>
+    <dimen name="nrc_basic_list_margin_left">10dp</dimen>
+    <dimen name="nrc_basic_list_margin_right">10dp</dimen>
+    <dimen name="nrc_basic_notice_margin_bottom">3dp</dimen>
+    <!-- 网上立案  其它材料  end -->
+    
+    <!-- 网上立案查看  基本信息 -->
+    <dimen name="nrc_review_basic_margin">10dp</dimen>
+    <dimen name="nrc_review_small_margin">5dp</dimen>
+    <dimen name="nrc_review_big_margin">20dp</dimen>
+    <dimen name="nrc_review_main_text_size">18sp</dimen>
+    <dimen name="nrc_review_assist_text_size">14sp</dimen>
+    <dimen name="nrc_review_tab_text_size">13sp</dimen>
+    <!-- 网上立案查看  end -->
+
+
+    <!-- 时间选择器 -->
+    <dimen name="wheel_year_width">120dp</dimen>
+    <dimen name="wheel_datetime_width">100dp</dimen>
+    <dimen name="wheel_button_height">40dp</dimen>
+    <dimen name="wheel_date_title_padding_top">10dp</dimen>
+    <dimen name="wheel_date_title_padding_bottom">10dp</dimen>
+    <dimen name="wheel_date_font_size_16">16sp</dimen>
+    <dimen name="wheel_date_font_size_18">18sp</dimen>
+    <!-- 时间选择器  end -->
+
+</resources>

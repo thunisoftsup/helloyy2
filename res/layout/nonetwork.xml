@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="156dp"
+            android:layout_height="60dp"
+            android:src="@drawable/no_net_erro" />
+
+        <TextView
+            android:id="@+id/tv_sm_ajcxm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="请检查网络设置"
+            android:textColor="@color/list_item_text_tint"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_refresh_nonet"
+            style="@style/dialog_btn_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="7dp"
+            android:text="@string/text_sx"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+</FrameLayout>

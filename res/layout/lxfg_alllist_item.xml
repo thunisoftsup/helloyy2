@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/dqly_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/nocorner_style_white"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <include layout="@layout/lxfg_elemnt_ly" />
+    </LinearLayout>
+
+</LinearLayout>

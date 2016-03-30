@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_page_default"
+    >
+
+    <include layout="@layout/common_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color_black"
+                android:text="原告" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:background="@color/white"
+                android:id="@+id/nrc_aco_plaintiff_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="#00000000" />
+
+            <TextView
+                android:id="@+id/nrc_aco_agent_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color_black"
+                android:text="原告代理人" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:background="@color/white"
+                android:id="@+id/nrc_aco_plaintiff_agent_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="#00000000" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

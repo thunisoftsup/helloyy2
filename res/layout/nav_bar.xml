@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_height"
+    android:layout_alignParentBottom="true"
+    android:orientation="horizontal" >
+
+    <RadioButton
+        android:id="@+id/nav_fyzx"
+        style="@style/head_text_small"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/nav_btn_bg_selector"
+        android:button="@null"
+        android:drawableTop="@drawable/nav_icon_fyzx_selector"
+        android:gravity="center"
+        android:paddingTop="@dimen/nav_icon_top"
+        android:text="@string/btn_text_fyzx" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/nav_btn_bg_stroke_default_dark" />
+
+    <RadioButton
+        android:id="@+id/nav_wdss"
+        style="@style/head_text_small"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/nav_btn_bg_selector"
+        android:button="@null"
+        android:drawableTop="@drawable/nav_icon_wdss_selector"
+        android:gravity="center"
+        android:paddingTop="@dimen/nav_icon_top"
+        android:text="@string/btn_text_wdss" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/nav_btn_bg_stroke_default_dark" />
+
+    <RadioButton
+        android:id="@+id/nav_sz"
+        style="@style/head_text_small"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/nav_btn_bg_selector"
+        android:button="@null"
+        android:drawableTop="@drawable/nav_icon_sz_selector"
+        android:gravity="center"
+        android:paddingTop="@dimen/nav_icon_top"
+        android:text="@string/btn_text_sz" />
+
+</RadioGroup>

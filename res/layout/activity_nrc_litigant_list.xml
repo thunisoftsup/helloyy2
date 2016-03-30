@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 查看更多，所有当事人 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_header" />
+
+    <LinearLayout
+        android:id="@+id/nrc_litigant_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/padding_15"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingTop="@dimen/padding_15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add_btn" />
+
+        <TextView
+            android:id="@+id/nrc_litigant_add_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:text="添加原告"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/nrc_litigant_list"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000" >
+    </ListView>
+
+</LinearLayout>

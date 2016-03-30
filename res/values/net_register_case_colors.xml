@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- 时间选择器背景色 -->
+	<color name="wheel_datetime_bg">#FFFFFF</color>
+	<color name="wheel_text_bg">#6D6D6D</color>
+	<color name="nrc_file_item_suffix_name_color">#517de7</color>
+	<color name="nrc_dialog_item_selected_color">#666666</color>
+	<color name="nrc_dialog_item_normal_color">#999999</color>
+</resources>

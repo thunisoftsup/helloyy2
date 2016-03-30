@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="210dp">
+
+    <LinearLayout
+        android:id="@+id/dialog_wheel_address_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="请选择城市"
+            android:textColor="@color/wheel_text_bg"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.widget.wheel.view.WheelView
+                android:id="@+id/dialog_wheel_address_province"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.widget.wheel.view.WheelView
+                android:id="@+id/dialog_wheel_address_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.widget.wheel.view.WheelView
+                android:id="@+id/dialog_wheel_address_area"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dialog_wheel_address_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wheel_button_height"
+                android:layout_gravity="left"
+                android:layout_weight="0.5"
+                style="@style/dialog_btn_negative"
+                android:layout_marginRight="10dp"
+                android:text="取消"/>
+
+            <Button
+                android:id="@+id/dialog_wheel_address_sure"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/wheel_button_height"
+                android:layout_weight="0.5"
+                style="@style/dialog_btn_positive"
+                android:layout_marginLeft="10dp"
+                android:text="确定"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_address_wait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_style_dark_gray"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/dialog_address_wait_anim_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/dialog_address_wait_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:background="@color/bg_default" >
+
+        
+        
+        <LinearLayout
+            android:id="@+id/nrc_ai_back"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:background="@drawable/titlebtn_selector"
+            android:contentDescription="@string/desciption_btn_back"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="@dimen/head_x_size"
+                android:layout_height="@dimen/head_x_size"
+                android:src="@drawable/cancel_btn" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nrc_ai_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_size_14"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nrc_ai_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="添加起诉状"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#99ffec47"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:text="提示：请确认上传的起诉状已经过经过原告签字。"
+            android:textColor="#ff9800"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_color_gray"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_20"
+                    android:paddingTop="@dimen/padding_15"
+                    android:text="关联原/被告"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="28dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="选择起诉状对应的原告和被告"
+                    android:textColor="#ff9800"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_ai_rel_plaintiff"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_ai_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:text="原告"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_ai_plaintiff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color_gray" />
+
+                <TextView
+                    android:id="@+id/nrc_ai_plaintiff_names"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/nrc_ai_rel_defendant"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_ai_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:text="被告"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_ai_defendant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color_gray" />
+
+                <TextView
+                    android:id="@+id/nrc_ai_defendant_names"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:ellipsize="end"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textColor="#333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_ai_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/nrc_ai_item_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="起诉状名称"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_16"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/nrc_ai_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:hint="起诉状名称"
+                    android:inputType="text"
+                    android:maxLength="300"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_ai_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20" 
+                    android:text="上传起诉状"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider_color_gray" />
+
+                <com.thunisoft.sswy.mobile.view.NoScrollGridView
+                    android:id="@+id/nrc_ai_material_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:listSelector="#00000000"
+                    android:numColumns="3"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/divider_color_gray" />
+
+                <Button
+                    android:id="@+id/nrc_ai_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_aa_delete_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/nrc_aa_base_margin"
+                    android:background="@color/white"
+                    android:text="删  除"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

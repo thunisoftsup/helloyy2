@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/nrc_basic_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_default" >
+
+        <TextView
+            android:id="@+id/nrc_basic_cancel"
+            android:layout_width="@dimen/head_x_size"
+            android:layout_height="@dimen/head_x_size"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:background="@drawable/cancel_btn"
+            android:padding="10dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="填写基本信息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/nrc_basic_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nrc_basic_bottom_height"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/nrc_basic_agree_create"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nrc_basic_agree_create_height"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:background="@drawable/nrc_basic_agree_create_btn"
+            android:text="同意并创建立案申请"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nrc_basic_bottom"
+        android:layout_below="@id/nrc_basic_header"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_8"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_basic_item_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="法院："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_18" />
+
+                <TextView
+                    android:id="@+id/nrc_basic_court_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_8"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_basic_item_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:text="案件类型："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_18" />
+
+                    <com.thunisoft.sswy.mobile.view.HorizontalListView
+                        android:id="@+id/nrc_basic_case_type_list"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/nrc_basic_list_height"
+                        android:layout_marginLeft="@dimen/nrc_basic_list_margin_left"
+                        android:layout_marginRight="@dimen/nrc_basic_list_margin_right"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_basic_item_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:text="申请类别："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_18" />
+
+                    <com.thunisoft.sswy.mobile.view.HorizontalListView
+                        android:id="@+id/nrc_basic_judge_program_list"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/nrc_basic_list_height"
+                        android:layout_marginLeft="@dimen/nrc_basic_list_margin_left"
+                        android:layout_marginRight="@dimen/nrc_basic_list_margin_right"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_basic_item_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:text="你的角色："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_18" />
+
+                    <com.thunisoft.sswy.mobile.view.HorizontalListView
+                        android:id="@+id/nrc_basic_applicant_list"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/nrc_basic_list_height"
+                        android:layout_marginLeft="@dimen/nrc_basic_list_margin_left"
+                        android:layout_marginRight="@dimen/nrc_basic_list_margin_right"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_dp_8"
+                    android:background="@color/divider_color_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_basic_agent_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_basic_item_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:text="代理人类型"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_18" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider_color_gray"
+                        android:layout_marginLeft="25dp"
+                         />
+
+                    <LinearLayout
+                        android:id="@+id/nrc_basic_agent_type_click"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/nrc_basic_list_margin_left"
+                        android:layout_marginRight="@dimen/nrc_basic_list_margin_right"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/nrc_basic_agent_type_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/nrc_basic_agent_margin_left"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <View
+                            android:layout_width="@dimen/nrc_bottom_arrow_width"
+                            android:layout_height="@dimen/nrc_bottom_arrow_height"
+                            android:background="@drawable/arrow_bottom_expand" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_dp_8"
+                    android:background="@color/divider_color_gray" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nrc_basic_notice_court"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/nrc_basic_notice_margin_bottom"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/font_size_12" />
+
+            <TextView
+                android:id="@+id/nrc_basic_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:lineSpacingExtra="7dp"
+                android:textColor="@color/text_color_red"
+                android:textSize="@dimen/font_size_10" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+  
+    <WebView 
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+    	android:layout_height="0dp"
+		android:layout_weight="8"
+        />
+    <FrameLayout 
+        android:id="@+id/frameLayoutArea"
+        android:layout_width="match_parent"
+   	 	android:layout_height="0dp"
+   	 	android:layout_weight="1"
+        
+        >
+       <LinearLayout 
+            android:id="@+id/buttonArea"
+    		android:layout_width="match_parent"
+   	 		android:layout_height="match_parent"
+   	 		android:background="#FFFFFF"
+   	 		android:paddingLeft="50dp"
+   	 		android:paddingRight="50dp"
+   	 		android:paddingTop="13dp"
+			android:paddingBottom="13dp"
+   	 		android:orientation="horizontal">
+    		<RadioGroup 
+        		android:layout_width="match_parent"
+       	 		android:layout_height="fill_parent"
+       	 		android:background="#517DE6"
+       	 		android:padding="0.5dp"
+        		android:orientation="horizontal">
+        		<RadioButton 
+            		android:id="@+id/waitForPay"
+            		android:layout_width="fill_parent"
+            		android:layout_height="match_parent"
+            		android:layout_weight="1"
+            		android:button="@null"
+            		android:background="@drawable/pay_btn_blue_selector"
+            		android:checked="true"
+            		android:text="待交费"
+            		android:gravity="center"
+            		android:textColor="#FFFFFF"/>
+         		<RadioButton 
+            		android:id="@+id/payYet"
+            		android:layout_width="fill_parent"
+            		android:layout_height="match_parent"
+            		android:layout_weight="1"
+            		android:layout_marginLeft="0.5dp"
+            		android:button="@null"
+            		android:background="@drawable/pay_btn_blue_selector"
+            		android:text="已交费"
+            		android:gravity="center"
+            		android:textColor="#4F7FE5"/>
+         		<RadioButton 
+            		android:id="@+id/payInvalid"
+            		android:layout_width="fill_parent"
+            		android:layout_height="match_parent"
+            		android:layout_weight="1"
+            		android:layout_marginLeft="0.5dp"
+            		android:button="@null"
+            		android:background="@drawable/pay_btn_blue_selector"
+            		android:text="已失效"
+            		android:gravity="center"
+            		android:textColor="#4F7FE5"/>
+    		</RadioGroup>
+		</LinearLayout>
+		
+       <Button 
+            android:id="@+id/downloadBtn"
+          	android:layout_width="match_parent"
+   	 	  	android:layout_height="match_parent" 
+           	android:text="下 载 凭 证"
+           	android:visibility="gone"
+           	android:background="#8CC34B"
+           	android:textColor="#ffffff"
+           	android:textSize="@dimen/font_size_20"
+           />
+        
+    </FrameLayout>
+
+    
+    
+
+</LinearLayout>

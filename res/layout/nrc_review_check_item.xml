@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_nrc_litigant_item_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nrc_review_basic_margin"
+        android:paddingBottom="@dimen/nrc_review_basic_margin"
+        android:paddingRight="@dimen/nrc_review_basic_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/check_result"
+            style="@style/text_nrc_review_tab"
+            android:layout_width="67dp"
+            android:layout_height="24dp"
+            android:background="#dc3839"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="不通过" />
+
+        <TextView
+            android:id="@+id/check_time"
+            style="@style/text_nrc_review_assist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="更新于：2015-08-01"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/check_bhyy"
+        style="@style/text_nrc_review_main"
+        android:paddingLeft="@dimen/nrc_review_basic_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="驳回原因：材料不全" />
+
+    <TextView
+        android:id="@+id/check_user"
+        style="@style/text_nrc_review_main"
+        android:paddingLeft="@dimen/nrc_review_basic_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="审核人：某法官" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/nrc_review_basic_margin"
+        android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/check_description"
+        style="@style/text_nrc_review_assist"
+        android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+        android:paddingLeft="@dimen/nrc_review_basic_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="审核意见：我跟你说哈，这个案子很诡异" />
+
+</LinearLayout>

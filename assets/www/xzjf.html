@@ -1,0 +1,483 @@
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>网上交费</title>
+<link href="css/ajList.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="css/payment.css" type="text/css" />
+<script type="text/javascript" src="js/iscroll-probe.js"></script>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+	var myScroll;
+	var pullDownFlag, pullUpFlag;
+	var pullDown, pullUp;
+	var spinner;
+	function positionJudge() {
+		if (this.y > 40) { //判断下拉
+			pullDown.innerHTML = "放开刷新页面";
+			pullDownFlag = 1;
+		} else if (this.y < (this.maxScrollY - 40)) { //判断上拉
+			pullUp.innerHTML = "放开刷新页面";
+			pullUpFlag = 1;
+		}
+	}
+	function action() {
+		if (pullDownFlag == 1) {
+			pullDownAction();
+			pullDown.innerHTML = "下拉刷新…";
+			pullDownFlag = 0;
+		} else if (pullUpFlag == 1) {
+			pullUpAction();
+			pullUp.innerHTML = "上拉刷新…";
+			pullUpFlag = 0;
+		}
+	}
+	function scrollRefresh() {
+		var height = document.getElementsByTagName("body")[0].offsetHeight;
+
+		document.getElementsByTagName("body")[0].offsetHeight = height + 100;
+	}
+
+	function loaded() {
+		if(myScroll != null){
+			return;
+		}
+		pullDownFlag = 0;
+		pullUpFlag = 0;
+		pullDown = document.getElementById("pullDown");
+		pullUp = document.getElementById("pullUp");
+		spinner = document.getElementById("spinner");
+		myScroll = new IScroll("#wrapper", {
+			probeType : 3,
+			//        momentum: false,//关闭惯性滑动
+			click: true,
+			mouseWheel : true,//鼠标滑轮开启
+			scrollbars : false,//滚动条可见
+			fadeScrollbars : false,//滚动条渐隐
+			interactiveScrollbars : false,//滚动条可拖动
+			shrinkScrollbars : 'scale', // 当滚动边界之外的滚动条是由少量的收缩
+			useTransform : true,//CSS转化
+			useTransition : true,//CSS过渡
+			bounce : true,//反弹
+			freeScroll : false,//只能在一个方向上滑动
+			startX : 0,
+			startY : 0
+			//options.bindToWrapper :false
+		//        snap: "li",//以 li 为单位
+		});
+		myScroll.on('scroll', positionJudge);
+		myScroll.on("scrollEnd", action);
+		myScroll.on("refresh", scrollRefresh);
+	}
+	function pullDownAction() {
+		spinner.style.display = "block";
+		$("#container").empty();
+		count = 1;
+		args = new Array();
+		setTimeout(loadData(count), 1000);
+		spinner.style.display = "none";
+		myScroll.refresh();
+	}
+	function pullUpAction() {
+		spinner.style.display = "block";
+		if (args.length < total) {
+			count++;
+			
+			setTimeout(loadData(count), 1000);
+			spinner.style.display = "none";
+			myScroll.refresh();
+		} else {
+			spinner.style.display = "none";
+			myScroll.refresh();
+		}
+	}
+	function updatePosition() {
+		pullDown.innerHTML = this.y >> 0;
+	}
+	document.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	}, false);
+
+	var args = null;
+	var type = null;
+	var typeNew = null;
+	var count = 1;
+
+	var total = 0;
+	var args = new Array();
+
+	var n = 0;
+	// alert("我执行了");
+	type = window.zfb.jsOnAndroidPayType();
+	// alert("我没有执行了，怎么办");
+	typeNew = type;
+	if (type == 3) {
+		type = 1;
+	}
+
+	$(document).ready(function() {
+		loadData(1);
+	});
+
+	function loadData(pageNo) {
+		$
+				.ajax({
+					type : "post",
+					url : window.zfb.jsOnAndroidGetUrl()
+							+ "/api/wsjf/getUserRelatedWsjfList",
+					data : {
+						sid : window.zfb.jsOnAndroidGetSid(),
+						rows : 10,
+						page : pageNo,
+						state : type
+					},
+					async : true,
+					cache : false,
+					dataType : "JSONP",
+					success : function(data) {
+						var jsonObj = JSON.parse(data);
+						var msg = jsonObj.message;
+						if (msg == "请重新登录") {
+							window.zfb.jsOnAndroidRelogin();
+						} else {
+							var jsonDataNew = jsonObj.data;
+							var jsonList = jsonDataNew.dataList;
+
+							var listHtml = "";
+							if (jsonList.length != 0) {
+
+								total = jsonDataNew.total;
+								
+								var i = args.length;
+								//var dataObj = eval("("+jsonList+")");
+
+								$
+										.each(
+												jsonList,
+												function(k, v) {
+
+													//案件名称
+													var cId = v.CId;
+													//案件名称
+													var cAjmc = v.CAjmc;
+													//收款法院名称
+													var cSkfyMc = v.CSkfyMc;
+													//案号
+													var cAh = v.CAh;
+													//应缴纳诉讼费用
+													var nYjssfje = v.NYjssfje;
+													//创建时间
+													var dCreate = v.DCreate;
+													dCreate = dCreate
+															.substring(0, 19);
+													//缴费类型
+													var cJflx = v.CJflx;
+													//缴费截止日期
+													var dJzrq = v.DJzrq;
+													dJzrq = dJzrq.substring(0,
+															19);
+													//缴费日期
+													var dJkrq = v.DJkrq;
+													if (typeNew == 2) {
+														dJkrq = dJkrq
+																.substring(0,
+																		19);
+													}
+													//缴费状态
+													var NState = v.NState;
+													//是否有效
+													var NYx = v.NYx;
+
+													var a = null;
+													var b = null;
+													if (dJzrq == null
+															|| dJzrq == "") {
+														b = -1;
+													} else {
+
+														var b = window.zfb
+																.jsOnAndroidcheckTime(dJzrq);
+
+													}
+
+													if (typeNew == 3) {//未交
+														if (b > 0 || NYx != 1) {//无效
+															listHtml += "<div class='content'><p>";
+															listHtml += cAjmc;
+															listHtml += "  </p>";
+															listHtml += "  <ul class='list'><li class='list1'>";
+															listHtml += cSkfyMc;
+															listHtml += "    </li>";
+															listHtml += "    <li class='list2'>";
+															listHtml += cAh;
+															listHtml += "    </li></ul>";
+															listHtml += "  <div class='line'></div>";
+															listHtml += "  <div class='money'>";
+															listHtml += nYjssfje
+																	+ "元";
+															listHtml += "  <span>";
+															listHtml += cJflx;
+															listHtml += "  </span></div>";
+															listHtml += "  <div class='payMissBtn'>";
+															listHtml += "已失效";
+															listHtml += "  </div>";
+															if (NYx == 2) {
+																listHtml += "  <div class='checkMissDate'>";
+																listHtml += "该案件已失效";
+																listHtml += "  </div>";
+															} else if (NYx == 2) {
+																listHtml += "  <div class='checkMissDate'>";
+																listHtml += "数据异常";
+																listHtml += "  </div>";
+															} else {
+																listHtml += "  <div class='checkMissDate'>";
+																listHtml += "交费截止日期："
+																		+ dJzrq;
+																listHtml += "  </div>";
+															}
+															n = args.push(v);
+															listHtml += "</div>";
+														}
+													} else {
+
+														if (typeNew == 1) {//  点击待缴费										   
+															if (b < 0
+																	&& NYx == 1) {//  有  效
+																listHtml += "<div class='content'><p>";
+																listHtml += cAjmc;
+																listHtml += "  </p>";
+																listHtml += "  <ul class='list'><li class='list1'>";
+																listHtml += cSkfyMc;
+																listHtml += "    </li>";
+																listHtml += "    <li class='list2'>";
+																listHtml += cAh;
+																listHtml += "    </li></ul>";
+																listHtml += "  <div class='line'></div>";
+																listHtml += "  <div class='money'>";
+																listHtml += nYjssfje
+																		+ "元";
+																listHtml += "  <span>";
+																listHtml += cJflx;
+																listHtml += "  </span></div>";
+																if (b != -1) {
+																	listHtml += "  <div class='date'>";
+																	listHtml += "交费截止日期："
+																			+ dJzrq;
+																	listHtml += "  </div>";
+																} else {
+																	listHtml += "  <div class='date'>";
+																	listHtml += "";
+																	listHtml += "  </div>";
+																}
+																n = args
+																		.push(v);
+																listHtml += "  <button class='btn' onclick=payMoney("
+																		+ "'"
+																		+ cId
+																		+ "'"
+																		+ ","
+																		+ nYjssfje
+																		+ ","
+																		+ "'"
+																		+ cJflx
+																		+ "'"
+																		+ ","
+																		+ "'"
+																		+ cAjmc
+																		+ "'"
+																		+ ","
+																		+ (n - 1)
+																		+ ")>交费</button>";
+																listHtml += "</div>";
+															}
+														} else {
+															listHtml += "<div class='content'><p>";
+															listHtml += cAjmc;
+															listHtml += "  </p>";
+															listHtml += "  <ul class='list'><li class='list1'>";
+															listHtml += cSkfyMc;
+															listHtml += "    </li>";
+															listHtml += "    <li class='list2'>";
+															listHtml += cAh;
+															listHtml += "    </li></ul>";
+															listHtml += "  <div class='line'></div>";
+															listHtml += "  <div class='money'>";
+															listHtml += nYjssfje
+																	+ "元";
+															listHtml += "  <span>";
+															listHtml += cJflx;
+															listHtml += "  </span></div>";
+															listHtml += "  <div class='payYetBtn'>";
+															listHtml += "已交费";
+															listHtml += "  </div>";
+															listHtml += "  <div class='checkDate'>";
+															listHtml += "交费时间："
+																	+ dJkrq;
+															listHtml += "  </div>";
+															listHtml += "  <div class='line'></div>";
+															n = args.push(v);
+															listHtml += " <div class='checkBtn' onclick=checkPZ(" + (n - 1) + ")>";
+															listHtml += "查看电子交费凭证";
+															listHtml += "</div>";
+															listHtml += "</div>";
+															listHtml += "</div>";
+														}
+													}
+												});
+
+							}
+							if (n == 0) {
+								listHtml += "<div class='content'><p>";
+								listHtml += "您无交费数据";
+								listHtml += "  </p>";
+							}
+							$("#container").append(listHtml);
+						}
+
+					},
+					error : function(data) {
+						//alert("错误" + data);
+					},
+					complete:function(XMLHttpRequest, textStatus){
+						loaded();
+					}
+				});
+	};
+
+	var cId = "";
+	var moneyNum = "";
+	var moneyType = "";
+	var data = "";
+
+	function payMoney(c, a, b, d, e) {
+		//   if(!window.zfb.jsOnAndroidCheckPay(c)){
+		$(".mask").show();
+		$(".method").show();
+		$("#cAm").text(d);
+		$(".box").hide();
+		$("#paytitle").hide();
+		$("#payOr").hide();
+		$("#zfbNew").show();
+		$("#zffy").html(a + "元<span>" + b + "</span>");
+		cId = c;
+		moneyNum = a;
+		moneyType = b;
+		data = JSON.stringify(args[e]);
+		window.zfb.clickOnCheckPZ(data, cId, moneyNum, moneyType);
+
+		//   }
+	};
+
+	function checkPZ(i) {
+		var a = "jfcg.html";
+		window.zfb.clickOnCheckPZ(a, JSON.stringify(args[i]));
+	};
+
+	function show() {
+		$(".box").show();
+		$("#paytitle").show();
+		$("#payOr").show();
+		$("#zfbNew").hide();
+	};
+
+	function hide() {
+		$(".box").hide();
+		$("#paytitle").hide();
+		$("#payOr").hide();
+		$("#zfbNew").show();
+	};
+
+	$(function() {
+
+		$(".close").click(function() {
+			$(".mask").hide();
+			$(".method").hide();
+		});
+
+		$("#zfbNew").click(function() {
+
+			window.zfb.jsOnAndroidCheckPay(cId);
+
+		});
+
+		$("#xzjfArrow").click(function() {
+			window.zfb.jsOnAndroidClose();
+		});
+
+		$("#refrush").click(function() {
+			$(".mask").hide();
+			$(".method").hide();
+			window.zfb.clickOnAndroid("xzjf.html");
+		});
+
+		$("#checkPz").click(function() {
+			window.zfb.jsOnAndroidCheckPzNew(cId);
+		});
+
+	});
+</script>
+
+
+
+</head>
+<body>
+
+	<header>
+		<a class="arrow" id=xzjfArrow></a>
+		<h2 class="topic">网上交费</h2>
+	</header>
+
+	<div class="warning">收到通知后，请及时在此或到银行交费。勿重复交费！</div>
+	<article id="wrapper" class="content1"
+		style="overflow-y: hidden;">
+		<div id="scroller" style="min-height:100.25%;">
+			<div id="pullDown">
+				<span>下拉刷新…</span>
+			</div>
+
+			<div id="container"></div>
+
+			<div id="pullUp">
+				<span class="pullUpIcon"></span><span class="pullUpLabel"></span>
+			</div>
+		</div>
+	</article>
+	<div id="spinner">
+		<div></div>
+		<div></div>
+	</div>
+
+	<div class="mask"></div>
+	<div class="pattem method">
+
+		<img class="close" src="img/close.png">
+		<h3>请选择交费方式</h3>
+		<p id="cAm">河北向阳电子有限公司诉日本科技发展有限公司股权转让纠纷一案</p>
+		<div class="money" id="zffy">
+			￥120.5元<span>受理费</span>
+		</div>
+
+		<div class="line"></div>
+
+		<dl class="mold" id="zfbNew">
+			<dd>
+				<img src="img/mold3.png">
+			</dd>
+			<dt>支付宝</dt>
+		</dl>
+
+		<h3 id="paytitle">您已交费，请刷新界面</h3>
+		<div class="box">
+			<button class="update" id="refrush">刷新界面</button>
+		</div>
+		<h3 id="payOr">或</h3>
+		<div class="box">
+			<button class="update" id="checkPz">查看电子凭证</button>
+		</div>
+	</div>
+</body>
+</html>

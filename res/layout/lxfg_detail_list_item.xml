@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_style_white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corner_style_lxfg_top"
+                android:gravity="center"
+                android:text="案号"
+                android:textColor="#999999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_AJH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2.5"
+                android:gravity="left|center_vertical"
+                android:padding="7dp"
+                android:text="北京市高级人民法院"
+                android:textColor="#666666"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CDCDCD"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#f2f2f2"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="承办法官"
+                android:textColor="#999999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_Lydx"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2.5"
+                android:gravity="left|center_vertical"
+                android:padding="7dp"
+                android:textColor="#666666"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CDCDCD"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/corner_style_lxfg_bottom"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="回复情况"
+                android:textColor="#999999"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2.5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="7dp" >
+
+                <TextView
+                    android:id="@+id/tv_lyCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="2条留言"
+                    android:textColor="#666666"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tv_yhfLyCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="1条回复"
+                    android:textColor="#666666"
+                    android:textSize="13dp" />
+
+                <LinearLayout
+                    android:id="@+id/show_all_lyhf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="全部"
+                        android:textColor="#666666"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:id="@+id/lxfg_dqimg"
+                        android:layout_width="34dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="3dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/lxfg_dq" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dqly_lyt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/nocorner_style_white"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <include layout="@layout/lxfg_elemnt_ly" />
+    </LinearLayout>
+
+</LinearLayout>

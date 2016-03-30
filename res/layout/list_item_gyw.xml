@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item__double_height"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/list_item_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/list_item_big_space" >
+
+        <TextView
+            style="@style/list_item_text_tint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/text_zyzh" />
+
+        <TextView
+            android:id="@+id/tv_value_zyzh"
+            style="@style/list_item_text_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_rzsj"
+        style="@style/list_item_default"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/list_item_small_space" >
+
+        <TextView
+            style="@style/list_item_text_tint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/text_rzsj" />
+
+        <TextView
+            android:id="@+id/tv_value_rzsj"
+            style="@style/list_item_text_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</LinearLayout>

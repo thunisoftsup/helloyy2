@@ -1,0 +1,362 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/default_page_padding"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_page_padding"
+        android:paddingRight="@dimen/default_page_padding" >
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+     		android:layout_height="wrap_content"
+       		android:layout_marginTop="@dimen/default_page_padding"
+        	android:orientation="horizontal">
+            <TextView
+            	android:id="@+id/tv_case_num"
+            	style="@style/text_explanatory"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:gravity="left"
+            	android:layout_marginTop="@dimen/default_page_padding" 
+            	android:text="@string/text_add_case_activity_case_num"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right|bottom"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_example"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_example_year"
+                    android:textColor="@color/text_add_case_activity_tips_context"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_year"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_add_case_activity_tips_context"
+                    android:text="@string/text_add_case_activity_case_num_example_word"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_word"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_di"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_add_case_activity_tips_context"
+                    android:text="@string/text_add_case_activity_case_num_example_num"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_num"
+                    android:textSize="@dimen/head_small_text_size" />
+            </LinearLayout>
+
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+     		android:layout_height="wrap_content"
+       		android:layout_marginTop="@dimen/default_page_padding"
+        	android:orientation="horizontal">
+            
+            <EditText
+            	android:maxLength="4"
+            	android:id="@+id/tv_add_case_num_year"
+            	style="@style/input_width_background"
+            	android:background="@drawable/input_box"
+            	android:layout_width="@dimen/add_case_num_year_width"
+            	android:layout_height="@dimen/input_height"
+            	android:layout_marginTop="@dimen/default_page_padding"
+            	android:inputType="number">
+        	</EditText>
+            
+            <TextView
+            	style="@style/text_explanatory"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginTop="@dimen/default_page_padding" 
+            	android:layout_marginLeft="@dimen/case_distance_text_small_padding" 
+            	android:textSize="@dimen/font_size_12"
+            	android:text="@string/text_add_case_activity_case_num_year"/>
+            
+            <EditText
+            	android:id="@+id/tv_add_case_num_word"
+            	style="@style/input_width_background"
+            	android:background="@drawable/input_box"
+            	android:layout_width="@dimen/add_case_num_word_width"
+            	android:layout_height="@dimen/input_height"
+            	android:singleLine="true"
+            	android:paddingRight="@dimen/case_distance_text_small_padding" 
+            	android:layout_marginLeft="@dimen/default_page_padding" 
+            	android:layout_marginTop="@dimen/default_page_padding">
+        	</EditText>
+            
+            <TextView
+            	style="@style/text_explanatory"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginLeft="@dimen/case_distance_text_small_padding" 
+            	android:layout_marginTop="@dimen/default_page_padding" 
+            	android:textSize="@dimen/font_size_12"
+            	android:text="@string/text_add_case_activity_case_num_word"/>
+            
+            <TextView
+            	style="@style/text_explanatory"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:visibility="gone"
+            	android:layout_marginLeft="@dimen/default_page_padding" 
+            	android:layout_marginTop="@dimen/default_page_padding" 
+            	android:text="@string/text_add_case_activity_case_num_di"/>
+            
+            <EditText
+            	android:id="@+id/tv_add_case_num_num"
+            	style="@style/input_width_background"
+            	android:background="@drawable/input_box"
+            	android:layout_width="@dimen/add_case_num_num_width"
+            	android:layout_height="@dimen/input_height"
+            	android:singleLine="true"
+            	android:paddingRight="@dimen/case_distance_small_padding" 
+            	android:layout_marginLeft="@dimen/case_distance_text_small_padding" 
+            	android:layout_marginTop="@dimen/default_page_padding">
+            </EditText>
+            	
+            <TextView
+            	style="@style/text_explanatory"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginLeft="@dimen/case_distance_text_small_padding" 
+            	android:layout_marginTop="@dimen/default_page_padding" 
+            	android:textSize="@dimen/font_size_12"
+            	android:text="@string/text_add_case_activity_case_num_num"/>
+        </LinearLayout>
+        
+                
+        <TextView
+            style="@style/text_explanatory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_page_padding" 
+            android:gravity="left"
+            android:text="@string/text_add_case_activity_case_rule"
+            android:textSize="@dimen/head_small_text_size" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+     		android:layout_height="wrap_content"
+       		android:layout_marginTop="@dimen/default_page_padding"
+        	android:orientation="horizontal">
+            <TextView
+            	style="@style/text_explanatory"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:gravity="left"
+            	android:layout_marginTop="@dimen/default_page_padding" 
+            	android:text="@string/text_add_case_activity_query_num"/>
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+     		android:layout_height="@dimen/input_height"
+       		android:layout_marginTop="@dimen/default_page_padding"
+       		android:background="@drawable/input_box"
+        	android:orientation="horizontal">
+            <EditText
+            	android:maxLength="20"
+            	android:id="@+id/tv_query_num"
+            	style="@style/input_width_background"
+            	android:layout_width="match_parent"
+            	android:layout_height="@dimen/input_height"
+            	android:inputType="number" >
+        	</EditText>
+        	
+        	<Button
+                android:id="@+id/button_clear"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:background="@drawable/add_case_cancel"
+                android:visibility="gone"
+                android:layout_marginRight="8dip" />
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btn_add"
+            style="@style/btn_red_arrow_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_btn_height_1"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:gravity="center"
+            android:text="@string/ok" />
+        <LinearLayout
+            android:id="@+id/tv_tips_err"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/default_page_padding"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/add_case_err" />
+
+            <TextView
+                android:id="@+id/tv_tips_err_info"
+                style="@style/text_explanatory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_padding"
+                android:text="@string/text_add_case_activity_query_err"
+                android:textColor="@color/text_add_case_activity_tips_err"
+                android:textSize="@dimen/head_small_text_size" />
+        </LinearLayout>
+        
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="@color/add_case_activity_tips_context_bg"
+            android:layout_marginTop="@dimen/default_page_padding" 
+            android:padding="@dimen/default_page_padding" 
+            android:orientation="vertical" >
+            
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/head_small_text_size"
+            android:background="@color/add_case_activity_tips_context_bg"
+            android:text="@string/text_add_case_activity_tips_context"/>
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="horizontal"
+                >
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="@dimen/head_small_text_size"
+		            android:background="@color/add_case_activity_tips_context_bg"
+		            android:text="请按照示例,依次输入横线上的"/>
+	            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="@dimen/head_small_text_size"
+		            android:textColor="@color/red"
+		            android:text="红色字体"/>  
+		            
+	            <TextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textSize="@dimen/head_small_text_size"
+		            android:background="@color/add_case_activity_tips_context_bg"
+		            android:text="部分。"/>
+
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_example"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_example_year"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_year"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="@string/text_add_case_activity_case_num_example_word"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_word"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:text="@string/text_add_case_activity_case_num_example_num"
+                    android:textSize="@dimen/head_small_text_size" />
+                <TextView
+                    style="@style/text_explanatory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_add_case_activity_case_num_num"
+                    android:textSize="@dimen/head_small_text_size" />
+            </LinearLayout>
+            
+            <TextView
+                 style="@style/text_explanatory"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="当前仅支持添加民事一审案件"
+                 android:textSize="@dimen/head_small_text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

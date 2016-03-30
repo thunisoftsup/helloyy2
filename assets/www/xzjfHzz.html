@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		 
+		<title>网上交费</title>
+				<header>
+			<a class="arrow" href="#"></a>
+			<h2 class="topic">网上交费</h2>
+		</header>
+		<div class="warning">收到通知后，请及时在此或到银行交费。勿重复交费！</div>
+		<div class="content" id="container"/>
+		<link rel="stylesheet" href="css/paymentHzz.css" type="text/css" />
+		<link rel="stylesheet" href="css/payment.css" type="text/css" />
+		<script src="js/jquery.js"></script>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+           window.onload=function(){
+		           $.ajax({
+							type:"post",
+							url:"http://172.16.203.214:8086/susong51/api/wsjf/getUserRelatedWsjfList",
+							data: {sid:window.zfb.jsOnAndroidGetSid(),rows:10,page:1,state:1},
+							async:true,
+							cache:false,
+							
+							dataType:"JSONP",
+							success:function(data){
+								var jsonObj = JSON.parse(data);
+								var jsonDataNew = jsonObj.data;
+								var jsonList = jsonDataNew.dataList;
+								
+								//var dataObj = eval("("+jsonList+")");
+								var listHtml = "";
+								$.each(jsonList,function(k,v){
+								   //案件名称
+								   var cAjmc=v.CAjmc;
+								   //收款法院名称
+								   var cSkfyMc=v.CSkfyMc;
+								   //案号
+								   var cAh=v.CAh;
+								   //应缴纳诉讼费用
+								   var nYjssfje=v.NYjssfje;
+								   //创建时间
+								   var dCreate=v.DCreate;
+								   //缴费类型
+								   var cJflx=v.CJflx;
+								   listHtml += "<div class='content'><p>";
+								   listHtml += cAjmc;
+								   listHtml += "  </p>";
+								   listHtml += "  <ul class='list'><li class='list1'>";
+					               listHtml += cSkfyMc;
+					               listHtml += "    </li>";
+					               listHtml += "    <li class='list2'>";
+					               listHtml += cAh;
+					               listHtml += "    </li></ul>";
+					               listHtml += "  <div class='line'></div>";
+					               listHtml += "  <div class='money'>";
+					               listHtml += nYjssfje;
+					               listHtml += "  <span>";
+					               listHtml += cJflx;
+					               listHtml += "  </span></div>";
+					               listHtml += "  <div class='date'>";
+					               listHtml += dCreate;
+					               listHtml += "  </div>";
+					               listHtml += "  <button class='btn'>交费</button>";
+					               listHtml += "</div>";
+					                        		   
+								});
+								$("#container").append(listHtml);
+							},
+							error: function(data) {
+								alert("错误"+data);
+							}
+						});
+           }
+           
+        </script>
+	</head>
+	<body>
+	</body>
+</html>

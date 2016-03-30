@@ -1,0 +1,29 @@
+<resources>
+
+    <dimen name="head_wdss_wdl_height">180dp</dimen>
+    <dimen name="normal_btn_font_size">16sp</dimen>
+    <dimen name="normal_btn_width_1">100dp</dimen>
+    <dimen name="normal_btn_width_2">145dp</dimen>
+    <dimen name="normal_btn_height_1">36dp</dimen>
+    <dimen name="normal_btn_margin_left">15dp</dimen>
+    <dimen name="head_logo_text_margin_top">42dp</dimen>
+    <dimen name="head_logo_text_wdss_margin_top">71dp</dimen>
+    <dimen name="head_arrow_right_margin_right">22dp</dimen>
+    <dimen name="list_group_margin_top">15dp</dimen>
+    <dimen name="list_item_height">48dp</dimen>
+    <dimen name="module_icon_padding_top">25dp</dimen>
+    <dimen name="module_icon_height">112dp</dimen>
+    <dimen name="input_space">20dp</dimen>
+    <dimen name="input_width">280dp</dimen>
+    <dimen name="input_height">40dp</dimen>
+    <dimen name="input_padding">10dp</dimen>
+    <dimen name="default_input_text_size">18sp</dimen>
+    <!-- 设置-未登录头部 -->
+    <dimen name="head_sz_wdl_img_margin_left">35dp</dimen>
+    <!-- 我的诉讼-已认证-头部 -->
+    <dimen name="head_wdss_yrz_height">280dp</dimen>
+    <!-- 我的诉讼-已认证-头部-tips -->
+    <dimen name="head_wdss_tips_margin_right">52dp</dimen>
+    <dimen name="head_wdss_tips_margin_top">1dp</dimen>
+
+</resources>

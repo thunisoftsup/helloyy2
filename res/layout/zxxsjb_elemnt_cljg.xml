@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#cccccc"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="3dp" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="拟办意见 :"
+            android:textColor="#999999"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_CNbyj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="left"
+            android:padding="7dp"
+            android:text="批准立案"
+            android:textColor="#666666"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="回复内容 :"
+            android:textColor="#999999"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_CHfnr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="left"
+            android:padding="7dp"
+            android:text="张关平"
+            android:textColor="#666666"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|right"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="办理人 :"
+            android:textColor="#999999"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_CBlrMc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="left"
+            android:padding="7dp"
+            android:text="张关平"
+            android:textColor="#666666"
+            android:textSize="15dp" />
+    </LinearLayout>
+</LinearLayout>

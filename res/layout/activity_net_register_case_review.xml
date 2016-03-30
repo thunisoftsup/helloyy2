@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <FrameLayout
+        android:id="@+id/nrc_detail_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:text="正在获取案件详情..."
+            android:textColor="#666666"
+            android:textSize="17dp" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/nrc_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+         >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/nrc_review_check"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_create_time_height"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    android:id="@+id/nrc_review_check_icon"
+                    android:layout_width="4dp"
+                    android:layout_height="fill_parent"
+                    android:background="#db3838"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp" />
+
+                <TextView
+                    android:id="@+id/nrc_review_check_tip"
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="审核：" />
+
+                <TextView
+                    android:id="@+id/nrc_review_check_result"
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未通过" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_check_time"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nrc_review_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                android:layout_marginTop="@dimen/nrc_review_big_margin"
+                android:text="基本信息" />
+
+            <LinearLayout
+                android:id="@+id/nrc_review_base_time"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/nrc_create_time_height"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingRight="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    android:id="@+id/nrc_review_base_create_time"
+                    style="@style/text_nrc_review_assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="创建于：2015-01-01" />
+
+                <TextView
+                    android:id="@+id/nrc_review_base_update_time"
+                    style="@style/text_nrc_review_assist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="更新于：2015-01-01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_review_base_court"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    android:id="@+id/nrc_review_base_court_name"
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="法院：湖南省高级人民法院" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_base_case_type"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                        android:text="案件类型：民事" />
+
+                    <TextView
+                        android:id="@+id/nrc_review_base_case_level"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                        android:text="申请类别：一审" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_review_base_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingLeft="@dimen/nrc_review_big_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    android:id="@+id/nrc_review_base_user_name"
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人：罗玉凤" />
+
+                <TextView
+                    android:id="@+id/nrc_review_base_user_card"
+                    style="@style/text_nrc_review_assist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="身份证：215654621321321231" />
+
+                <TextView
+                    android:id="@+id/nrc_review_base_user_phone"
+                    style="@style/text_nrc_review_assist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="手机号码：13113131313" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nrc_review_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                android:layout_marginTop="@dimen/nrc_review_big_margin"
+                android:text="原告" />
+
+            <LinearLayout
+                android:id="@+id/nrc_review_plaintiff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    android:id="@+id/nrc_review_plaintiff_name"
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="罗玉凤" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_plaintiff_count"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nrc_review_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                android:layout_marginTop="@dimen/nrc_review_big_margin"
+                android:text="被告" />
+
+            <LinearLayout
+                android:id="@+id/nrc_review_defendant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    android:id="@+id/nrc_review_defendant_name"
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="罗玉凤" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_defendant_count"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nrc_review_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+                android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                android:layout_marginTop="@dimen/nrc_review_big_margin"
+                android:text="代理人" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/agent_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/bg_page_default"
+                android:dividerHeight="@dimen/nrc_review_basic_margin" >
+            </com.thunisoft.sswy.mobile.view.NoScrollListView>
+
+            <LinearLayout
+                android:id="@+id/witness_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/text_nrc_review_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:layout_marginTop="@dimen/nrc_review_big_margin"
+                    android:text="证人" />
+
+                <com.thunisoft.sswy.mobile.view.NoScrollListView
+                    android:id="@+id/witness_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/bg_page_default"
+                    android:dividerHeight="@dimen/nrc_review_basic_margin" >
+                </com.thunisoft.sswy.mobile.view.NoScrollListView>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_nrc_review_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                android:layout_marginTop="@dimen/nrc_review_big_margin"
+                android:text="诉讼材料" />
+
+            <LinearLayout
+                android:id="@+id/nrc_review_indictment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="起诉书" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_indictment_count"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="证件" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_review_plaintiff_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1px"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    style="@style/text_nrc_review_assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:text="原告" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_plaintiff_card_count"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_review_agent_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    style="@style/text_nrc_review_assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:text="代理人" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_agent_card_count"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_review_evidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/nrc_review_basic_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/nrc_review_basic_margin"
+                android:paddingTop="@dimen/nrc_review_basic_margin" >
+
+                <TextView
+                    style="@style/text_nrc_review_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_review_big_margin"
+                    android:text="证据" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_review_evidence_count"
+                        style="@style/text_nrc_review_assist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/arrow_right_review" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrcr_pro_user_sfrz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_id_verify_height"
+                    android:background="@color/divider_color_gray" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@color/divider_color_gray"
+                        android:text="申请人身份认证"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_16" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/nrcr_applicant_identify"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@color/white"
+                    android:paddingTop="10dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/nrcr_hold_idcard_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/nrc_sfrz_scsfz"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/nrcr_hold_idcard_tip"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/nrcr_hold_idcard_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/nrc_file_item_add" >
+
+                                <FrameLayout
+                                    android:id="@+id/nrcr_hold_idcard_suffix_bg"
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+                                    <TextView
+                                        android:id="@+id/nrcr_hold_idcard_suffix_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="3dp"
+                                        android:gravity="center"
+                                        android:text="JPEG"
+                                        android:textColor="@color/nrc_file_item_suffix_name_color"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+                            </RelativeLayout>
+                        </com.thunisoft.sswy.mobile.view.ResizeFrameLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/nrcr_idcard_face_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/nrc_sfrz_sfzzm"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/nrcr_idcard_face_tip"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/nrcr_idcard_face_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/nrc_file_item_add" >
+
+                                <FrameLayout
+                                    android:id="@+id/nrcr_idcard_face_suffix_bg"
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+                                    <TextView
+                                        android:id="@+id/nrcr_idcard_face_suffix_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="3dp"
+                                        android:gravity="center"
+                                        android:text="JPEG"
+                                        android:textColor="@color/nrc_file_item_suffix_name_color"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+                            </RelativeLayout>
+                        </com.thunisoft.sswy.mobile.view.ResizeFrameLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/nrcr_idcard_back_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/nrc_sfrz_sfzbm"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/nrcr_idcard_back_tip"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/nrcr_idcard_back_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/nrc_file_item_add" >
+
+                                <FrameLayout
+                                    android:id="@+id/nrcr_idcard_back_suffix_bg"
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+                                    <TextView
+                                        android:id="@+id/nrcr_idcard_back_suffix_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="3dp"
+                                        android:gravity="center"
+                                        android:text="JPEG"
+                                        android:textColor="@color/nrc_file_item_suffix_name_color"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+                            </RelativeLayout>
+                        </com.thunisoft.sswy.mobile.view.ResizeFrameLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

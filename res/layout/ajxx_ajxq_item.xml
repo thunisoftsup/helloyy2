@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/ajicon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0"
+            android:src="@drawable/n_ccbq" />
+
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="7dp"
+            android:text="北京市高级人民法院"
+            android:textColor="#666666"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="3dp"
+            android:layout_weight="0"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow_right_black" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginBottom="3dp"
+        android:id="@+id/dividor"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#dbdbdb"
+        android:scaleType="fitXY" />
+
+</LinearLayout>

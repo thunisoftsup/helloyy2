@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_header_height"
+    android:background="@color/bg_default" >
+
+    <LinearLayout
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/common_header_height"
+        android:layout_height="@dimen/common_header_height"
+        android:background="@drawable/titlebtn_selector"
+        android:contentDescription="@string/desciption_btn_back"
+        android:gravity="center" >
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="22dp"
+            android:src="@drawable/backarrow_new" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/action_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/btn_blank"
+        android:layout_toRightOf="@+id/btn_back"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_20" />
+
+    <ImageView
+        android:id="@+id/btn_blank"
+        android:layout_width="@dimen/common_header_height"
+        android:layout_height="@dimen/common_header_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titlebtn_selector"
+        android:contentDescription="@string/img_desc_todo" />
+
+</RelativeLayout>

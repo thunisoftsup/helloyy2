@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 网上立案       net register case=nrc -->
+    <string name="nrc_select_all">全选</string>
+    <string name="nrc_select_all_cancel">取消</string>
+    
+    <string name="nrc_sfrz_scsfz">手持证件照</string>
+    <string name="nrc_sfrz_sfzzm">身份证正面</string>
+    <string name="nrc_sfrz_sfzbm">身份证背面</string>
+</resources>  

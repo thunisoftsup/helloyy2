@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.thunisoft.dzfy.mobile"
+    android:versionCode="4"
+    android:versionName="1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" 
+        tools:ignore="OldTargetApi"
+         />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+    
+    <meta-data
+        android:name="UMENG_APPKEY"
+        android:value="567ee2b267e58e3b9c002a16" />
+    <meta-data
+        android:name="UMENG_CHANNEL"
+        android:value="Private" />
+
+    <application
+        android:name="com.thunisoft.sswy.mobile.Susong51Application_"
+        android:allowBackup="false"
+        android:alwaysRetainTaskState="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.thunisoft.sswy.mobile.Susong51Activity_"
+            android:hardwareAccelerated="false"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name="com.thunisoft.sswy.mobile.pay.PayDemoActivity">
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.pay.H5PayDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.pay.PayFaliedActivity_">
+        </activity>
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.court.CourtListActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.transition.LoadingActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.transition.GuidPageActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.HomeActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.LoginActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.AlertDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.BuildingAlertDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.ConfirmDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.ConfirmOtherDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.CustomConfirmDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.ZjlxDioagActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.RzfsDioagActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.ChangePasswordActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.PubChangePasswordActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.LsrzActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.GywActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.SmrzActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.ZcActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.ajxx.AjcxActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.ZcqrActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.camara.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.LsrzSmjgActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.WslacxActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.SsxfActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.WsyjcxActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.ZxxsjbActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.LxfgActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.LyAjActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.LxfgEditActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.LxfgDetailActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AjLxfgDetailActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AjxxActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AjxxCxActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AjxxDetailActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AjxxSpfDetailActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AjdtActy_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.AddCaseActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dzsd.QmmQswsWdlActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dzsd.WritListActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dzsd.SdListActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dzsd.LocalSdListActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.SingleImageActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.ZhmmActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.auth.YhzcxyActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.YzmDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <!-- 网上立案  添加基本信息 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NetRegisterCaseBasicActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案 添加信息-->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NetRegisterCaseActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  添加当事人 原告、被告 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddLitigantActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案  当事人 查看更多 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcLitigantListActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案  添加代理人 律师代理人、非律师代理人 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddAgentActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  代理人 查看更多 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAgentListActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案  代理人 关联 被代理人 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcRelAgentedActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  添加证人 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddWitnessActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  证人 查看更多 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcWitnessListActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案  证人 关联 有利方 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcRelAvailActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  添加起诉状 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddIndictmentActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  起诉状  查看更多 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcIndictmentListActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案  证件所属人 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddCertOwnerActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  当事人_自然人 添加证件 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddNaturalCertActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  当事人_法人 添加证件 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddLegalCertActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+         <!-- 网上立案  当事人_非法人 添加证件 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddNonLegalCertActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  律师、承担法律责任的律师   代理人添加证件 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddAgentCertActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  除了 律师、承担法律责任的律师，以外  代理人添加证件 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddOtherAgentCertActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  添加证据 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddEvidenceActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  证据  查看更多 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcEvidenceListActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案  证据关联当事人 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcEvidenceRelOwnerActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  添加其它材料 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcAddOtherMaterialActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案  当事人类型列表 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.nrc.LitigantTypeDioagActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <!-- 网上立案  代理人类型列表 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.nrc.AgentTypeDioagActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog" >
+        </activity>
+        <!-- 网上立案  性别 列表 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.nrc.GenderDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog">
+        </activity>
+        <!-- 选择日期  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.DateDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog">
+        </activity>
+        <!-- 选择地区  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.SelectAddressActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 网上立案查看页  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NetRegisterCaseReviewActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 网上立案查看页审核列表  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NRCReviewCheckActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NRCReviewLitigantActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NRCReviewIndictmentActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NRCReviewCertificatesActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NRCReviewSingleDataActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NRCReviewEvidenceActivity_"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 选择文件  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.FileChooserActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 关联当事人  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.NrcRelLitigantActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        <!-- 添加图片  -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.dialog.AddPhotoDialogActivity_"
+            android:screenOrientation="portrait"
+            android:theme="@style/custom_dialog">
+        </activity>
+        <!-- 相册  -->
+        <activity
+            android:name="com.photoselector.activity.PhotoSelectorActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.photoselector.activity.PhotoPreviewActivity"
+            android:screenOrientation="portrait"
+            android:label="图片预览" >
+        </activity>
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.nrc.PicPreviewActivity_"
+            android:screenOrientation="portrait"
+            android:label="预览原图" >
+        </activity>
+        
+        <!-- 网上交费 -->
+        <activity
+            android:name="com.thunisoft.sswy.mobile.activity.pay.PayOnlineHomeActivity_"
+            android:screenOrientation="portrait">
+        </activity>
+        
+        <service android:name="com.thunisoft.sswy.mobile.service.UpLoadPayInfoService_" />
+        
+        <!-- 本地维护服务器时间 服务 -->
+        <service android:name="com.thunisoft.sswy.mobile.service.ServerTimeService_" 
+            android:label="@string/app_remote_date"
+            android:priority="1000"
+            android:exported="false"/>
+    </application>
+
+</manifest>

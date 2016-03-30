@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 除了律师、承担法律责任的律师 意外的代理人 添加证件 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:background="@color/bg_default" >
+
+        <ImageView
+            android:id="@+id/nrc_aoac_back"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/titlebtn_selector"
+            android:contentDescription="@string/desciption_btn_back"
+            android:src="@drawable/backarrow_selector" />
+
+        <TextView
+            android:id="@+id/nrc_aoac_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:text="确定"
+            android:textColor="#ffffff"
+            android:textSize="21dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nrc_aoac_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/nrc_aac_save"
+            android:layout_toRightOf="@id/nrc_aac_back"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="证件所属代理人名称"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nrc_aoac_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:focusable="true"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_16" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollGridView
+                android:id="@+id/nrc_aoac_cert_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" />
+
+            <TextView
+                android:id="@+id/nrc_aoac_teller_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:focusable="true"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_16" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollGridView
+                android:id="@+id/nrc_aoac_teller_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:listSelector="#00000000"
+                android:numColumns="4"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_aoac_license_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:paddingBottom="10dp"
+                android:divider="@null" 
+                android:listSelector="#00000000" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:background="@color/bg_default" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/titlebtn_selector"
+            android:src="@drawable/backarrow_selector"
+            android:contentDescription="@string/desciption_btn_back" />
+
+        <TextView
+            android:id="@+id/action_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_header_height"
+            android:layout_marginRight="@dimen/common_header_height"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="留言详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+
+        <ImageView
+            android:id="@+id/btn_blank"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/img_desc_todo"
+            android:padding="7dp"
+            android:background="@drawable/titlebtn_selector"
+            android:src="@drawable/creat_lxfgly_icon" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/all_hf_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9f9f9"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

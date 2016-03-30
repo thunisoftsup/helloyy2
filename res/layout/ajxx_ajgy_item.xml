@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:padding="1px">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="案号"
+                android:textColor="#999999"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2.5"
+                android:gravity="left|center_vertical"
+                android:padding="7dp"
+                android:text="北京市高级人民法院"
+                android:textColor="#666666"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dividor"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#dbdbdb"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,212 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/payTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:text="沈阳向阳电子公司大黄金大上赛季的机会大水井坊缴费地方"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/font_size_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/payCourtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="北京市朝阳区人民法院"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_18" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/payCourtNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="2015朝初字第00002号"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_18" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/payCountNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="￥100"
+                        android:textColor="@color/text_color_red"
+                        android:textSize="@dimen/font_size_22" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="受理费"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/font_size_13" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/payDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="2015-09-01"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_18" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/waitForPayLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/waitForPayBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/text_color_blue"
+                        android:gravity="center"
+                        android:text="缴 费"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/font_size_20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/payOrInvalidLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right" >
+
+                        <View
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_launcher"
+                            android:gravity="bottom" />
+
+                        <TextView
+                            android:id="@+id/payOrInvalidDisplayTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="right"
+                            android:text="已缴费"
+                            android:textColor="@color/text_color_green"
+                            android:textSize="@dimen/font_size_20" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/payOrInvalidDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="2015-02-01"
+                        android:textColor="@color/text_color_green"
+                        android:textSize="@dimen/font_size_14" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color_gray" />
+        
+        <TextView 
+            android:id="@+id/checkCredenceTV"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="查看电子缴费凭证"
+            android:gravity="center"
+            android:textColor="@color/text_color_blue"
+            android:textSize="@dimen/font_size_20"
+            />
+    </LinearLayout>
+
+</LinearLayout>

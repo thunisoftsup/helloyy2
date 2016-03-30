@@ -1,0 +1,152 @@
+<resources>
+
+    <dimen name="default_text_size">16sp</dimen>
+    <dimen name="default_input_text_size">18sp</dimen>
+    <dimen name="sub_title_text_size">18sp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="default_page_padding">10dp</dimen>
+    <dimen name="big_page_padding">20dp</dimen>
+    <dimen name="common_select_ok">96dp</dimen>
+    <dimen name="province_item_width">96dp</dimen>
+    <dimen name="province_item_height">48dp</dimen>
+    <dimen name="province_item_font_size">16sp</dimen>
+    <dimen name="province_item_padding_top">16dp</dimen>
+    <dimen name="court_item_width">96dp</dimen>
+    <dimen name="court_item_height">48dp</dimen>
+    <dimen name="court_item_font_size">16sp</dimen>
+    <dimen name="court_item_padding_top">16dp</dimen>
+    <dimen name="court_item_padding_left">12dp</dimen>
+    <dimen name="court_item_selector_width">20dp</dimen>
+    <dimen name="court_select_ok_font_size">12sp</dimen>
+    <dimen name="court_select_ok_btn_height">48dp</dimen>
+    <dimen name="court_select_ok_btn_font_size">16sp</dimen>
+    <dimen name="court_select_ok_btn_padding_left">30dp</dimen>
+    <dimen name="court_select_ok_btn_padding_right">45dp</dimen>
+    <dimen name="normal_btn_font_size">16sp</dimen>
+    <dimen name="normal_btn_width_1">90dp</dimen>
+    <dimen name="normal_btn_width_2">140dp</dimen>
+    <dimen name="normal_btn_height_1">36dp</dimen>
+    <dimen name="normal_btn_margin_left">10dp</dimen>
+    <dimen name="normal_btn_margin_left_1">8dp</dimen>
+    <dimen name="normal_btn_layout_margin_bottom">20dp</dimen>
+    <dimen name="head_text_big_margin_top">15dp</dimen>
+    <dimen name="head_text_small_margin_top">10dp</dimen>
+    <dimen name="head_logo_text_margin_top">37dp</dimen>
+    <dimen name="head_logo_text_wdss_margin_top">73dp</dimen>
+    <dimen name="head_arrow_right_margin_top">9dp</dimen>
+    <dimen name="head_vertical_divider_width">1dp</dimen>
+    <dimen name="list_item_height">48dp</dimen>
+    <dimen name="list_item_padding_left">20dp</dimen>
+    <dimen name="list_group_margin_top">15dp</dimen>
+    <dimen name="list_item_small_space">1dp</dimen>
+    <dimen name="list_item_big_space">8dp</dimen>
+    <dimen name="module_linelayout_padding_top">15dp</dimen>
+    <dimen name="module_icon_building_width">30dp</dimen>
+    <dimen name="module_icon_building_height">13dp</dimen>
+    <dimen name="module_icon_padding_top">25dp</dimen>
+    <dimen name="module_icon_height">112dp</dimen>
+    <dimen name="module_icon_margin">1dp</dimen>
+    <dimen name="input_width">280dp</dimen>
+    <dimen name="input_height">40dp</dimen>
+    <dimen name="input_padding">10dp</dimen>
+    <dimen name="border_width">2px</dimen>
+    <dimen name="default_radius">4dp</dimen>
+    <dimen name="input_space">20dp</dimen>
+    <dimen name="cxm_tab_height">40dp</dimen>
+    <dimen name="dialog_out_padding">40dp</dimen>
+    <dimen name="dialog_small_space">16dp</dimen>
+    <dimen name="dialog_big_space">24dp</dimen>
+    <dimen name="dialog_title_text_size">20sp</dimen>
+    <dimen name="dialog_body_text_size">14sp</dimen>
+    <dimen name="dialog_subtitle_text_size">16sp</dimen>
+    <dimen name="dialog_btn_height">40dp</dimen>
+    <dimen name="dialog_subtitle_height">18dp</dimen>
+    <dimen name="dialog_btn_border_width">1px</dimen>
+    <dimen name="tab_content_padding_small">20dp</dimen>
+    <dimen name="tab_content_padding_big">40dp</dimen>
+    <dimen name="match_screen_btn_margin">30dp</dimen>
+    
+    <dimen name="ybsmwz_single_height">30dp</dimen>
+    <dimen name="standard_item_height">70dp</dimen>
+    <dimen name="standard_item_text_content_size">14sp</dimen>
+    <dimen name="sd_info_text_size">14sp</dimen>
+    <dimen name="standard_item_multiple_height">70dp</dimen>
+    <!-- 头部文字大小 -->
+    <dimen name="common_header_height">56dp</dimen>
+    <dimen name="head_big_text_size">24sp</dimen>
+    <dimen name="head_small_text_size">12sp</dimen>
+    <dimen name="head_log_text_size">10sp</dimen>
+    <!-- 头部X图标的大小 -->
+    <dimen name="head_x_size">18dp</dimen>
+    
+    <!-- 我的诉讼-未登录头部 -->
+    <dimen name="head_wdss_wdl_height">180dp</dimen>
+    <dimen name="head_wdss_wdl_img_margin_bottom">22dp</dimen>
+    <dimen name="head_padding_left">26dp</dimen>
+    <dimen name="head_wdss_wdl_text_big_margin_left">14dp</dimen>
+    <dimen name="head_wdss_wdl_text_big_padding_top">5dp</dimen>
+    <dimen name="head_wdss_wdl_text_small_padding_top">10dp</dimen>
+
+    <!-- 未认证头部 -->
+    <dimen name="head_wrz_height">180dp</dimen>
+
+    <!-- 设置-未登录头部 -->
+    <dimen name="head_sz_wdl_height">120dp</dimen>
+    <dimen name="head_sz_wdl_img_margin_left">26dp</dimen>
+    <dimen name="head_sz_wdl_img_margin_top">16dp</dimen>
+    <dimen name="head_sz_wdl_text_big_margin_left">16dp</dimen>
+
+    <!-- 设置-实名认证头部 -->
+    <dimen name="head_sz_smrz_height">120dp</dimen>
+
+    <!-- 我的诉讼-已认证-头部 -->
+    <dimen name="head_wdss_yrz_height">280dp</dimen>
+    <dimen name="head_wdss_yrz_bottom_height">40dp</dimen>
+    <dimen name="head_wdss_yrz_photo_margin_top">22dp</dimen>
+    <dimen name="head_wdss_yrz_photo_width">100dp</dimen>
+    <dimen name="head_wdss_yrz_photo_height">100dp</dimen>
+    <dimen name="head_wdss_yrz_setting_photo_width">70dp</dimen>
+    <dimen name="head_wdss_yrz_setting_photo_height">70dp</dimen>
+
+    <!-- 我的诉讼-已认证-头部-tips -->
+    <dimen name="head_wdss_tips_height">40dp</dimen>
+    <dimen name="head_wdss_tips_margin_right">52dp</dimen>
+    <dimen name="head_wdss_tips_margin_top">1dp</dimen>
+    <dimen name="head_wdss_tips_padding_left">10dp</dimen>
+    <dimen name="head_wdss_tips_padding_top">6dp</dimen>
+
+    <!-- nav bar -->
+    <dimen name="nav_height">60dp</dimen>
+    <dimen name="nav_icon_top">8dp</dimen>
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    
+    <!-- 加载页 -->
+    <dimen name="loading_page_court_name_size">24dp</dimen>
+    <dimen name="loading_page_loading_size">16dp</dimen>
+    <dimen name="loading_page_icon_width">140dp</dimen>
+    
+    <!-- 添加案件页 -->
+    <dimen name="add_case_num_year_width">60dp</dimen>
+    <dimen name="add_case_num_word_width">70dp</dimen>
+    <dimen name="add_case_num_num_width">80dp</dimen>
+    <dimen name="case_distance_small_padding">5dp</dimen>
+    <dimen name="case_distance_text_small_padding">3dp</dimen>
+    <dimen name="case_distance_normal_padding">10dp</dimen>
+    <dimen name="add_case_description_title_size">20sp</dimen>
+    <dimen name="add_case_description_text_size">13sp</dimen>
+    
+    <!-- switch tab -->
+    <dimen name="switch_tab_parent_height">50dp</dimen>
+    <dimen name="switch_tab_height">30dp</dimen>
+    <dimen name="switch_tab_margin">40dp</dimen>
+    
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <!-- 网上立案列表页，选择审核状态弹出框 宽度 -->
+    <dimen name="wslacx_status_width">120dp</dimen>
+    <!-- 网上立案列表页，选择审核状态弹出框 距所属控件的高度 -->
+    <dimen name="pop_menu_off_y">5dip</dimen>
+</resources>

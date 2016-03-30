@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:background="@color/bg_default" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/titlebtn_selector"
+            android:src="@drawable/backarrow_selector"
+            android:contentDescription="@string/desciption_btn_back" />
+
+        <TextView
+            android:id="@+id/action_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btn_blank"
+            android:layout_toRightOf="@+id/btn_back"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/btn_blank"
+            android:padding="7dp"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/creat_lxfgly_icon"
+            android:background="@drawable/titlebtn_selector"
+            android:contentDescription="@string/img_desc_todo" />
+    </RelativeLayout>
+
+    <include layout="@layout/search_element" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lxfg_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#f9f9f9"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:scrollbars="none" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+    <include
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:layout_weight="0"
+        layout="@layout/switch_element" />
+
+</LinearLayout>

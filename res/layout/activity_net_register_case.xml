@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:background="@color/bg_default"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/nrc_cancel"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:background="@drawable/titlebtn_selector"
+            android:contentDescription="@string/desciption_btn_back"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="@dimen/head_x_size"
+                android:layout_height="@dimen/head_x_size"
+                android:src="@drawable/cancel_btn" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#2557c2" />
+
+        <TextView
+            android:id="@+id/nrc_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="暂存"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_size_20"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/nrc_submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/text_color_green"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_20" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/nrc_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_8"
+                android:background="@color/divider_color_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_10"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:paddingTop="@dimen/padding_10" >
+
+                <TextView
+                    android:id="@+id/nrc_create_time_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="创建于"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_12" />
+
+                <TextView
+                    android:id="@+id/nrc_create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/nrc_create_time_tip"
+                    android:text="2015-01-01 "
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_12" />
+
+                <TextView
+                    android:id="@+id/nrc_update_time_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="最近修改 "
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_12" />
+
+                <TextView
+                    android:id="@+id/nrc_update_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/nrc_update_time_tip"
+                    android:text="2015-01-01 01:01:01"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_12" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_10"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:paddingTop="14dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="法院  :"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/nrc_court_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="湖南省高级人民法院"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="14dp"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="案件类型："
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/nrc_case_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="民事"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/nrc_judge_program_margin_left"
+                    android:text="申请类别："
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/nrc_judge_program"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="起诉"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_10"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20"
+                android:paddingTop="14dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请人 :"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+
+                <TextView
+                    android:id="@+id/nrc_applicant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="张三"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_20" >
+
+                <TextView
+                    android:id="@+id/nrc_applicant_certificate_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证："
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/nrc_applicant_certificate_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/padding_10"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电话号码："
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+
+                <TextView
+                    android:id="@+id/nrc_applicant_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13000006666"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/font_size_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nrc_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_dp_15"
+                    android:background="@color/divider_color_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_basic_item_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/text_color_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:text="审核："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/nrc_check_status"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:text="未通过"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <TextView
+                            android:id="@+id/nrc_check_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:text="2015-09-01"
+                            android:textColor="@color/text_color_gray"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <View
+                            android:layout_width="@dimen/nrc_right_arrow_width"
+                            android:layout_height="@dimen/nrc_right_arrow_height"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:background="@drawable/arrow_right_black" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_color_gray"
+                android:paddingBottom="@dimen/padding_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingTop="@dimen/padding_15"
+                android:text="当事人"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:id="@+id/nrc_add_plaintiff"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/add_plaintiff_pressed_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="添加原告"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_plaintiff_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/nrc_plaintiff_view_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/nrc_plaintiff_view_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_5"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/nrc_add_defendant"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/add_plaintiff_pressed_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="添加被告"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_defendant_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/nrc_defendant_view_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/nrc_defendant_view_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_color_gray"
+                android:paddingBottom="@dimen/padding_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingTop="@dimen/padding_15"
+                android:text="代理人"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:id="@+id/nrc_add_agent"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/add_plaintiff_pressed_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="添加代理人"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_agent_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/nrc_agent_view_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/nrc_agent_view_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_color_gray"
+                android:paddingBottom="@dimen/padding_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingTop="@dimen/padding_15"
+                android:text="证人"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:id="@+id/nrc_add_witness"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/add_plaintiff_pressed_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="添加证人"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_witness_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/nrc_witness_view_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/nrc_witness_view_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_color_gray"
+                android:paddingBottom="@dimen/padding_5"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingTop="@dimen/padding_15"
+                android:text="诉讼材料"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/font_size_16" />
+
+            <LinearLayout
+                android:id="@+id/nrc_add_indictment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/add_plaintiff_pressed_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="添加起诉状"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_indictment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/nrc_indictment_view_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/nrc_indictment_view_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_5"
+                android:background="@color/divider_color_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:id="@+id/nrc_add_certificate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/add_plaintiff_pressed_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_add_certificate_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:background="@drawable/add_btn"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="添加证件"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nrc_certificate_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nrc_certificate_tip_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/font_size_12" />
+
+                    <View
+                        android:layout_width="@dimen/nrc_right_arrow_width"
+                        android:layout_height="@dimen/nrc_right_arrow_height"
+                        android:background="@drawable/arrow_right_black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_5"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:id="@+id/nrc_add_evidence"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/add_plaintiff_pressed_selector"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_20" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/add_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="添加证据"
+                    android:textColor="@color/text_color_blue"
+                    android:textSize="@dimen/font_size_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_color_gray" />
+
+            <com.thunisoft.sswy.mobile.view.NoScrollListView
+                android:id="@+id/nrc_evidence_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/nrc_evidence_view_more"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/nrc_evidence_view_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多" />
+
+                <View
+                    android:layout_width="@dimen/nrc_right_arrow_width"
+                    android:layout_height="@dimen/nrc_right_arrow_height"
+                    android:background="@drawable/arrow_right_black" />
+            </LinearLayout>
+
+            <!-- 1.0 暂时不用 -->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_dp_5"
+                android:background="@color/divider_color_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/nrc_add_other_material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/padding_20" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/add_btn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:text="添加其它材料"
+                        android:textColor="@color/text_color_blue"
+                        android:textSize="@dimen/font_size_16" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/nrc_other_material_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/nrc_other_material_view_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="查看更多" />
+            </LinearLayout>
+            <!-- 1.0 暂时不用 end -->
+
+            <LinearLayout
+                android:id="@+id/nrc_pro_user_sfrz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nrc_id_verify_height"
+                    android:background="@color/divider_color_gray" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:background="@color/divider_color_gray"
+                        android:text="申请人身份认证"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/font_size_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:text="请保持照片清晰可辨别"
+                        android:textColor="@color/text_color_orange"
+                        android:textSize="@dimen/font_size_12" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/nrc_applicant_identify"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:baselineAligned="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/nrc_hold_idcard_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/nrc_sfrz_scsfz"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/nrc_hold_idcard_tip"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/nrc_hold_idcard_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/nrc_file_item_add" >
+
+                                <FrameLayout
+                                    android:id="@+id/nrc_hold_idcard_suffix_bg"
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+                                    <TextView
+                                        android:id="@+id/nrc_hold_idcard_suffix_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="3dp"
+                                        android:gravity="center"
+                                        android:text="JPEG"
+                                        android:textColor="@color/nrc_file_item_suffix_name_color"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+                            </RelativeLayout>
+                        </com.thunisoft.sswy.mobile.view.ResizeFrameLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/nrc_idcard_face_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/nrc_sfrz_sfzzm"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/nrc_idcard_face_tip"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/nrc_idcard_face_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/nrc_file_item_add" >
+
+                                <FrameLayout
+                                    android:id="@+id/nrc_idcard_face_suffix_bg"
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+                                    <TextView
+                                        android:id="@+id/nrc_idcard_face_suffix_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="3dp"
+                                        android:gravity="center"
+                                        android:text="JPEG"
+                                        android:textColor="@color/nrc_file_item_suffix_name_color"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+                            </RelativeLayout>
+                        </com.thunisoft.sswy.mobile.view.ResizeFrameLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/nrc_idcard_back_tip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/nrc_sfrz_sfzbm"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="@dimen/font_size_16" />
+
+                        <com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/nrc_idcard_back_tip"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/nrc_idcard_back_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/nrc_file_item_add" >
+
+                                <FrameLayout
+                                    android:id="@+id/nrc_idcard_back_suffix_bg"
+                                    android:layout_width="40dp"
+                                    android:layout_height="42dp"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+                                    <TextView
+                                        android:id="@+id/nrc_idcard_back_suffix_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginRight="3dp"
+                                        android:gravity="center"
+                                        android:text="JPEG"
+                                        android:textColor="@color/nrc_file_item_suffix_name_color"
+                                        android:textSize="14sp" />
+                                </FrameLayout>
+                            </RelativeLayout>
+                        </com.thunisoft.sswy.mobile.view.ResizeFrameLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

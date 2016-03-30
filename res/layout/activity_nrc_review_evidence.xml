@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="@color/bg_page_default">
+    
+    <include layout="@layout/common_header" />
+
+    <ListView
+        android:id="@+id/evidence_list"
+        android:layout_marginTop="@dimen/nrc_review_basic_margin"
+        android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+        android:layout_marginRight="@dimen/nrc_review_basic_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:dividerHeight="@dimen/nrc_review_basic_margin" 
+        android:divider="@color/bg_page_default" >
+    </ListView>
+
+</LinearLayout>

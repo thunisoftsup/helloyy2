@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password_text">密&#8201;&#8201;码</string>
+    <string name="app_name">电子法院</string>
+    <string name="img_desc_todo">TODO</string>
+    <string name="text_default">默认文字</string>
+    <string name="desciption_btn_back">返回按钮</string>
+    <string name="court_select_ok_text_yxz">已选择</string>
+    <string name="ok">确 　定</string>
+    <string name="add">添 　加</string>
+    <string name="bt_text_dl">登　录</string>
+    <string name="bt_text_zc">注　册</string>
+    <string name="bt_text_zhmm">找回密码</string>
+    <string name="btn_text_smrz">实名认证</string>
+    <string name="btn_text_lsrz">律师用户</string>
+    <string name="text_wdl">未登录</string>
+    <string name="text_wrz">未认证</string>
+    <string name="text_yrz">已认证</string>
+    <string name="head_text_wdaj">我的案件</string>
+    <string name="text_zbaj">在办案件</string>
+    <string name="text_lsaj">历史案件</string>
+    <string name="head_small_title_wdl">登录查看案件信息</string>
+    <string name="head_small_title_ydl">点击查看关于我的信息</string>
+    <string name="text_zero">0</string>
+    <string name="text_aj_number_tips">个案件有更新</string>
+    <string name="btn_text_fyzx">法院在线</string>
+    <string name="btn_text_wdss">我的诉讼</string>
+    <string name="btn_text_sz">　设置　</string>
+    <string name="text_tgcxmcxaj"><![CDATA[通过<font color="#f5ad23">查询码</font>或<font color="#f5ad23">短信验证码</font>查询案件]]></string>
+    <string name="text_tgqmmqsws"><![CDATA[通过<font color="#f5ad23">签名码</font>签收文书]]></string>
+    <string name="module_name_wslacx">网上立案</string>
+    <string name="module_name_ssxfcx">网上交费</string>
+    <string name="module_name_wsyjcx">网上阅卷</string>
+    <string name="module_name_zxjbcx">网上信访</string>
+    <string name="module_name_wsqs">文书签收</string>
+    <string name="module_name_lxfg">联系法官</string>
+    <string name="item_text_lsrz">进行律师认证</string>
+    <string name="item_text_xgmm">修改密码</string>
+    <string name="item_text_zhmm">修改密码</string>
+    <string name="item_text_jcgx">检测更新</string>
+    <string name="item_text_gy">关于</string>
+    <string name="item_text_pz">配置</string>
+    <string name="item_text_zxdl">注销登录</string>
+    <string name="text_yhdl">用户登录</string>
+    <string name="text_yhm">用户名</string>
+    <string name="text_normal_user">普通用户</string>
+    <string name="text_lawyer_user">律师用户</string>
+    <string name="text_mm">密　码</string>
+    <string name="text_mm_1">密码</string>
+    <string name="text_zc">注册</string>
+    <string name="text_note1">没有账户？现在</string>
+    <string name="text_devider">|</string>
+    <string name="text_sm_lsrz"><![CDATA[律师亲自去法院进行身份认证，法院对律师信息进行登记认证，认证通过后，会打印认证告知书，告知书中会包含<font color="#db3838">数字认证码</font>和<font color="#db3838">认证二维码</font>，律师可以凭这两种认证码进行身份认证。]]></string>
+    <string name="text_sm_cx_ajcxm"><![CDATA[<font color="#db3838">案件查询码</font>是诉讼参与人查询所参与案件信息的凭证，它是法院生成的一串字符，包含在法院发给您的通知短信中或者告知文书中。]]></string>
+    <string name="text_sm_cx_dxyzm"><![CDATA[<font color="#db3838">短信验证码</font>是诉讼参与人通过立案时所留的手机号来接收的一串字符，以短信的形式告知。]]></string>
+    <string name="text_sm_dzqmm"><![CDATA[<font color="#db3838">签名码</font>是一组6位数字、字母组合的一串字符，包含在法院发给您的通知短信中，用于签收电子文书。]]></string>
+    <string name="text_form_title_lsrzsf">通过认证码认证律师身份</string>
+    <string name="text_lsrzxx">您的律师认证信息为：</string>
+    <string name="text_smcg">二维码扫描成功！</string>
+    <string name="text_zjhm">证件号码</string>
+    <string name="text_sfzh">身份证号</string>
+    <string name="text_zyzh">执业证号</string>
+    <string name="text_rzm">认证码</string>
+    <string name="btn_text_rz">认　证</string>
+    <string name="text_ermrzls">通过扫描二维码认证</string>
+    <string name="text_ts">提示</string>
+    <string name="btn_text_wzdl">我知道了</string>
+    <string name="btn_text_qd">确定</string>
+    <string name="btn_text_qx">取消</string>
+    <string name="text_sswywlptxy"><u>《用户注册协议》</u></string>
+    <string name="text_wyydbty">我已阅读并同意</string>
+    <string name="text_ymm">原密码</string>
+    <string name="text_xmm">新密码</string>
+    <string name="text_qrmm">确认密码</string>
+    <string name="text_qrxmm">确认新密码</string>
+    <string name="text_zsxm">真实姓名</string>
+    <string name="text_xzzj">选择证件</string>
+    <string name="text_sjhm">手机号码</string>
+    <string name="text_sjyzm">手机验证码</string>
+    <string name="text_hqyzm">获取验证码</string>
+    <string name="text_qrzx">您确认要注销登录？</string>
+    <string name="text_xm">姓名</string>
+    <string name="text_sfz">身份证</string>
+    <string name="text_rzsj">认证时间</string>
+    <string name="text_gyw">关于我</string>
+    <string name="text_ajcxmrz">案件查询码认证</string>
+    <string name="text_dxyzmrz">短信验证码认证</string>
+    <string name="text_ajcxm">案件查询码</string>
+    <string name="text_rz">认　证</string>
+    <string name="text_cx">查　询</string>
+    <string name="text_cxm">查询码</string>
+    <string name="text_qmm">签名码</string>
+    <string name="text_qs">签收</string>
+    <string name="text_qb">查看全部</string>
+    <string name="text_yqsws">已签收文书</string>
+    <string name="text_dxyzm">短信验证码</string>
+    <string name="text_ajcx">案件查询</string>
+    <string name="text_xyb">下一步</string>
+    <string name="text_rzhc">认证之后会有如下好处：\n1、关联查看本人所有案件信息\n2、无需使用签名码，直接签收文书\n3、使用我的留言服务，与法官沟通交流</string>
+    <string name="btn_text_zc_smrz">用注册信息实名认证为当事人</string>
+    <string name="btn_text_jxlsrz">进行律师认证</string>
+    <string name="btn_text_qtxx_smrz">用其他信息进行实名认证</string>
+    <string name="btn_text_brz">不认证</string>
+    <string name="label_sdr">送达人：</string>
+    <string name="label_sdrq">送达日期：</string>
+    <string name="label_bgdh">办公电话：</string>
+    <string name="label_ts">庭室：</string>
+    <string name="label_fy">法院：</string>
+    <string name="no_pdf_reader">没有找到可以打开pdf的软件。</string>
+    <string name="no_word_reader">没有找到可以打开word的软件。</string>
+    <string name="text_dqs">未签收</string>
+    <string name="text_yqs">已签收</string>
+    <string name="text_ck">查看</string>
+    <string name="text_qsz">签收中</string>
+    <string name="sd_search_hint">输入案号、案件名称搜索</string>
+    <string name="text_jzgd">加载更多</string>
+    <string name="text_wdws">文书签收</string>
+    <string name="text_sx">刷　新</string>
+    <string name="text_djtpsx">输入验证码</string>
+    <string name="text_nodata">没有数据</string>
+    <string name="text_zzpzz">正在配置中&#8230;</string>
+    <string name="btn_add_case">添加案件</string>
+    <string name="text_add_case_activity_case_num">案号</string>
+    <string name="text_add_case_activity_case_num_example">例：</string>
+    <string name="text_add_case_activity_case_num_example_year"><u>2015</u></string>
+    <string name="text_add_case_activity_case_num_example_word"><u>吉民初</u></string>
+    <string name="text_add_case_activity_case_num_example_num"><u>000003</u></string>
+    <string name="text_add_case_activity_case_num_year">（年）</string>
+    <string name="text_add_case_activity_case_num_word">（字第）</string>
+    <string name="text_add_case_activity_case_num_di">第</string>
+    <string name="text_add_case_activity_case_num_num">号</string>
+    <string name="text_add_case_activity_case_rule">请输入民事一审案件案号</string>
+    <string name="text_add_case_activity_query_num">查询码</string>
+    <string name="text_add_case_activity_tips_context">说明：</string>
+    <string name="text_add_case_activity_query_err">没有查询到相关案件，请确认案号或查询码是否正确！</string>
+    <string name="text_add_case_success_activity_title">添加案件成功</string>
+    <string name="text_case_no_document_tip">您关联的案件暂时没有文书</string>
+    <string name="bt_to_case_detail">查看案件详情</string>
+    <string name="umeng_appkey">56602671e0f55a7c070007ec</string>
+    <string name="umeng_channel">Private</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_ydtp">YdtpActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_alert_dialog">AlertDialogActivity</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    
+    <string name="empty_hint">The directory is empty</string>
+    <string name="open_file_error_format">The format of file is error</string>
+
+    <string name="app_remote_date">服务器时间</string>
+    <string name="id_card_regex">0123456789xX</string>
+    <!-- <string name="number_english_char">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string> -->
+    <string name="tel_num_regex">0123456789-—</string>
+    <string name="text_download">保存到手机？</string>
+    <string name="text_delete">确认删除？</string>
+    <string name="text_sjh">手机号</string>
+    
+
+    <item type="id" name="tag_first">1</item>
+    <item type="id" name="tag_second">2</item>
+
+</resources>

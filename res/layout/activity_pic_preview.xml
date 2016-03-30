@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/organ_pic_preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/organ_pic_preview_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:layout_gravity="top"
+        android:background="@color/bg_default" >
+
+        <ImageView
+            android:id="@+id/organ_pic_preview_back"
+            android:layout_width="@dimen/common_header_height"
+            android:layout_height="@dimen/common_header_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/titlebtn_selector"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/backarrow_selector" />
+
+        <TextView
+            android:id="@+id/organ_pic_preview_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:text="原图"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_size_20" />
+
+        <TextView
+            android:id="@+id/organ_pic_preview_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/organ_pic_preview_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_header_height"
+        android:layout_gravity="bottom"
+        android:background="#e0000000"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/organ_pic_preview_reupload"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="重新上传" />
+
+        <Button
+            android:id="@+id/organ_pic_preview_delete"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="删除" />
+    </RelativeLayout>
+
+</FrameLayout>

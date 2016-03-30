@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/list_item_default"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height" >
+
+    <ImageView
+        android:id="@+id/img_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/img_desc_todo"
+        android:src="@drawable/arrow_right_red_selector" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/text_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/img_arrow"
+        android:text="@string/item_text_pz" />
+
+    <TextView
+        android:id="@+id/tv_court_name"
+        style="@style/list_item_text_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textView1"
+        android:paddingRight="7dp"
+       />
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <dimen name="module_icon_margin">1px</dimen>
+    <dimen name="border_width">1px</dimen>
+    <dimen name="normal_btn_font_size">16sp</dimen>
+    <dimen name="normal_btn_width_1">120dp</dimen>
+    <dimen name="normal_btn_width_2">180dp</dimen>
+    <dimen name="normal_btn_height_1">36dp</dimen>
+    <dimen name="normal_btn_margin_left">20dp</dimen>
+    <dimen name="head_logo_text_wdss_margin_top">73dp</dimen>
+    <!-- 我的诉讼-未登录头部 -->
+    <dimen name="head_wdss_wdl_height">180dp</dimen>
+    <dimen name="head_padding_left">50dp</dimen>
+    <!-- 设置-未登录头部 -->
+    <dimen name="head_sz_wdl_img_margin_left">60dp</dimen>
+    <!-- 我的诉讼-已认证-头部-tips -->
+    <dimen name="head_wdss_tips_margin_right">80dp</dimen>
+    <dimen name="head_wdss_tips_margin_top">-2dp</dimen>
+
+</resources>

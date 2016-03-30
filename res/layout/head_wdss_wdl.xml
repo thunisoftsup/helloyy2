@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/head_wdss_wdl_height"
+    android:background="@drawable/head_bg_wdss_wdl" >
+
+    
+    
+    <include
+        android:id="@+id/layout_buttons"
+        layout="@layout/head_buttons_wdl" />
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/head_wdss_wdl_img_margin_bottom"
+        android:layout_marginLeft="@dimen/head_padding_left"
+        android:contentDescription="@string/img_desc_todo"
+        android:src="@drawable/head_logo_wdaj" />
+
+    <TextView
+        android:id="@+id/tv_big"
+        style="@style/head_text_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/img_head"
+        android:layout_marginLeft="@dimen/head_wdss_wdl_text_big_margin_left"
+        android:layout_toRightOf="@+id/img_head"
+        android:paddingTop="@dimen/head_wdss_wdl_text_big_padding_top"
+        android:text="@string/head_text_wdaj" />
+
+    <TextView
+        android:id="@+id/tv_small"
+        style="@style/head_text_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_big"
+        android:layout_below="@+id/tv_big"
+        android:paddingTop="@dimen/head_wdss_wdl_text_small_padding_top"
+        android:text="@string/head_small_title_wdl" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onSettingClick"
+        android:padding="5dp"
+        android:src="@drawable/setting_btn" />
+
+</RelativeLayout>

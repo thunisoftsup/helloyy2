@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/file_item_bg"
+    android:orientation="vertical"
+    android:paddingBottom="5dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingTop="13dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/file_chooser_item_suffix_bg"
+            android:layout_width="60dp"
+            android:layout_height="39dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/file_item_suffix_bg" >
+
+            <TextView
+                android:id="@+id/file_chooser_item_suffix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="JPG" />
+        </FrameLayout>
+
+        <CheckBox
+            android:id="@+id/file_chooser_item_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/nrc_file_chooser_checkbox"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/file_chooser_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="asdfasf" />
+
+</LinearLayout>

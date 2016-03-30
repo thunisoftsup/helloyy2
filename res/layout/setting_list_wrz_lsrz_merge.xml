@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <include
+        android:id="@+id/item_list_xgmm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/list_item_big_space"
+        layout="@layout/setting_list_item_xgmm" />
+
+    <include layout="@layout/setting_list_wdl_merge" />
+
+    <include
+        android:id="@+id/item_list_zxdl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_height"
+        android:layout_marginTop="@dimen/list_item_big_space"
+        layout="@layout/setting_list_item_zxdl" />
+
+</merge>

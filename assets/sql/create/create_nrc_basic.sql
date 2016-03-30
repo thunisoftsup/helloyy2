@@ -1,0 +1,64 @@
+--网上立案_立案预约_基本信息
+create table [t_layy] (
+    [c_id]                 varchar(32)                          not null,    -- id
+    [c_court_id]           varchar(32)                          null,        -- 法院id
+    [c_court_name]         varchar(225)                         null,        -- 法院名称
+    [c_ysfy_id]            varchar(32)                          null,        -- 原审法院id
+    [c_ysfy_name]          varchar(300)                         null,        -- 原审法院名称
+    [n_ajlx]               int                                  null,        -- 案件类型
+    [c_ajlx]               varchar(100)                         null,        -- 案件类型
+    [n_spcx]               int                                  null,        -- 审判程序
+    [c_spcx]               varchar(300)                         null,        -- 审判程序
+    [c_ysaj_bh]            varchar(32)                          null,        -- 原审案件编号
+    [c_ysah]               varchar(300)                         null,        -- 原审案号
+    [c_ysah_nh]            varchar(300)                         null,        -- （原审案号）年号
+    [c_ysah_jcspzh]        varchar(300)                         null,        -- （原审案号）简称和审判字号
+    [c_ysah_phh]           varchar(300)                         null,        -- （原审案号）排行号
+    [c_ysah_zphh]          varchar(300)                         null,        -- （原审案号）子排行号
+    [c_ssqq]               text                                 null,        -- 诉讼请求
+    [c_aqsm]               text                                 null,        -- 案情说明
+    [c_dsr]                varchar(600)                         null,        -- 当事人
+    [n_status]             int                                  null,        -- 状态
+    [n_zctj]               int                                  null,        -- 再次提交
+    [d_create]             varchar(20)                          null,        -- 创建时间
+    [d_update]             varchar(20)                          null,        -- 更新时间
+    [c_sqbdje]             varchar(100)                         null,        -- 申请标的金额
+    [c_sqbdw]              varchar(300)                         null,        -- 申请标的物
+    [c_sqbdxw]             varchar(300)                         null,        -- 申请标的行为
+    [n_zxyjlx]             int                                  null,        -- 执行依据类型
+    [c_zxyjlx]             varchar(50)                          null,        -- 执行依据类型
+    [c_zxyjwsbh]           varchar(100)                         null,        -- 执行依据文书编号
+    [n_sqr_ly]             int                                  null,        -- 申请人来源
+    [n_sqr_rzqk]           int                                  null,        -- 申请人认证情况代码
+    [c_sqr_rzqk]           varchar(100)                         null,        -- 申请人认证情况名称
+    [n_sqr_sf]             int                                  null,        -- 申请人身份代码
+    [c_sqr_sf]             varchar(100)                         null,        -- 申请人身份名称
+    [c_sqr_id]             varchar(32)                          null,        -- 申请人id（如果申请人是当事人则是当事人id，如果是代理人是代理人id）
+    [c_sqr_name]           varchar(32)                          null,        -- 申请人姓名（如果申请人是当事人则是当事人姓名，如果是代理人是代理人姓名）
+    [c_pro_user_id]        varchar(32)                          null,        -- 专业人员id（申请人）
+    [c_pro_user_name]      varchar(100)                         null,        -- 专业人员名称（申请人）
+    [n_idcard_type]        int                                  null,        -- 证件类型
+    [c_idcard]             varchar(50)                          null,        -- 证件号码
+    [c_sjhm]               varchar(30)                          null,        -- 手机号码
+    [c_dzyx]               varchar(50)                          null,        -- 电子邮箱
+    [c_zyzh]               varchar(50)                          null,        -- 执业证号
+    [c_lsmc]               varchar(150)                         null,        -- 律所名称
+    [n_fs]                 int                                  null,        -- 是否发送np系统
+    [n_fsjg]               int                                  null,        -- 发送np系统处理结果
+    [c_fsjg]               varchar(30)                          null,        -- 发送np系统处理结果名称
+    [c_ywxt_jlid]          varchar(32)                          null,        -- 业务系统id(np案件主键)
+    [c_ah]                 varchar(100)                         null,        -- 案号
+    [c_ajmc]               varchar(300)                         null,        -- 案件名称
+    [n_ay]                 int                                  null,        -- 案由代码
+    [c_ay]                 varchar(100)                         null,        -- 案由名称
+    [n_yjssfje]            varchar(30)                          null,        -- 应交纳诉讼费用金额
+    [n_yjf]                int                                  null,        -- 是否已缴费
+    [n_ysa]                int                                  null,        -- 是否已收案
+    [n_yla]                int                                  null,        -- 是否已正式立案
+    [n_ys]                 int                                  null,        -- 是否移送
+    [c_ywxt_ys_aj_bh]      varchar(32)                          null,        -- 业务系统原审案件编号
+    [n_xssx]               int                                  null,        -- 显示顺序
+    [c_flyj]               varchar(600)                         null,        -- 法律依据
+    [n_sync]               int                                  null,        -- 是否已和服务器同步
+      constraint [] primary key ([c_id]) on conflict replace
+);

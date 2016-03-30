@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.thunisoft.sswy.mobile.view.ResizeFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/nrc_file_item_file"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/file_item_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/nrc_file_item_suffix_bg"
+            android:layout_width="40dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/nrc_indictment_file_suffix_bg" >
+
+            <TextView
+                android:id="@+id/nrc_file_item_suffix_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="3dp"
+                android:text="JPEG"
+                android:textSize="14sp"
+                android:textColor="@color/nrc_file_item_suffix_name_color"/>
+        </FrameLayout>
+        
+    </RelativeLayout>
+
+    <!-- 删除 -->
+    <Button
+        android:id="@+id/nrc_file_item_del"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="top|right"
+        android:background="@drawable/nrc_file_item_del_btn"
+        android:visibility="visible"/>
+    
+    <!-- 图片以外，其它文件，文件名 -->
+    <TextView
+        android:id="@+id/nrc_file_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="8sp"
+        android:visibility="gone"
+        android:text="测试" />
+
+</com.thunisoft.sswy.mobile.view.ResizeFrameLayout>

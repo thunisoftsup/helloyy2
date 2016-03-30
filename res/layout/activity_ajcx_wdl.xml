@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <TextView
+        android:id="@+id/tv_sm_ajcxm"
+        style="@style/text_explanatory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/default_text_size"
+        android:layout_marginLeft="@dimen/default_page_padding"
+        android:layout_marginRight="@dimen/default_page_padding"
+        android:layout_marginTop="@dimen/default_text_size"
+        android:paddingLeft="@dimen/default_page_padding"
+        android:paddingRight="@dimen/default_page_padding"
+        android:paddingTop="@dimen/default_text_size" />
+    
+    <TextView
+        android:id="@+id/tv_sm_dxyzm"
+        style="@style/text_explanatory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/default_text_size"
+        android:layout_marginLeft="@dimen/default_page_padding"
+        android:layout_marginRight="@dimen/default_page_padding"
+        android:layout_marginTop="@dimen/default_text_size"
+        android:paddingLeft="@dimen/default_page_padding"
+        android:paddingRight="@dimen/default_page_padding"
+        android:visibility="gone"
+        android:paddingTop="@dimen/default_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_page_padding"
+        android:layout_marginRight="@dimen/default_page_padding"
+        android:layout_marginTop="@dimen/default_page_padding"
+        android:background="@drawable/corner_bg_white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/border_width"
+        android:paddingRight="@dimen/border_width" >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/border_width"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tab_cxm"
+                style="@style/tab_center"
+                android:layout_height="@dimen/cxm_tab_height"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:text="@string/text_ajcxm"
+                android:width="0dp" />
+
+            <View
+                android:layout_width="@dimen/border_width"
+                android:layout_height="match_parent"
+                android:background="@color/border_default" />
+
+            <RadioButton
+                android:id="@+id/tab_dxyzm"
+                style="@style/tab_center"
+                android:layout_height="@dimen/cxm_tab_height"
+                android:layout_weight="1"
+                android:button="@null"
+                android:text="@string/text_dxyzm"
+                android:width="0dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/text_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/input_height"
+            android:paddingLeft="@dimen/tab_content_padding_small"
+            android:paddingRight="@dimen/tab_content_padding_small" />
+
+        <LinearLayout
+            android:id="@+id/layout_cxm_cx"
+            style="@style/tab_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <EditText
+                android:id="@+id/tv_cxm_zjhm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:maxLength="20"
+                android:hint="@string/text_zjhm" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/tv_cxm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:singleLine="true"
+                android:hint="@string/text_cxm" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btn_cxm_cx"
+                style="@style/normal_btn_blue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:text="@string/text_cx" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_yzm_cx"
+            style="@style/tab_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+
+            <EditText
+                android:id="@+id/tv_yzm_zjhm"
+                android:maxLength="20"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_zjhm" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >
+
+                <EditText
+                    android:id="@+id/tv_sjhm"
+                    android:maxLength="11"
+                    style="@style/input_width_background"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_weight="5"
+                    android:hint="@string/text_sjhm" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/btn_send_yzm"
+                    style="@style/btn_positive"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginLeft="@dimen/default_page_padding"
+                    android:layout_weight="3"
+                    android:text="@string/text_hqyzm" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/tv_yzm"
+                android:maxLength="6"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_dxyzm" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btn_yzm_cx"
+                style="@style/normal_btn_blue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:text="@string/text_cx" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

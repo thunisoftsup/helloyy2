@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网上交费</title>
+		<link href="css/payment.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		<header>
+			<a class="arrow" id="jfcgArrow"></a>
+			<h2 class="topic">网上交费</h2>
+		</header>
+		
+		<div class="voucher">
+			<div class="top">
+				<h5 id="cSkfyMcTop">吉林电子法院诉讼费用交纳凭证</h5>
+			</div>
+			<div class="device"></div>
+			<p class="electronic">电子票号：</p>
+			<p class="num" id="cDzph">0123456789</p>
+			<div class="line"></div>
+			<ul class="detail">
+				<li id="cAjmc"></li>
+				<li id="cAh"></li>
+				<li id="cJkrMc"></li>
+				<li id="dJkrq"></li>
+				<li id="jedx"></li>
+				<li id="nYjssfje"></li>
+			</ul>
+			</div>
+		<div class="care">
+			<ul>
+				<li>1.电子交费凭证为电子法院认证交费成功凭证</li>
+				<li>2.可凭此证到法院换取《吉林省诉费结算专用票据》</li>
+				<li>3.本凭证不能当发票使用</li>
+			</ul>
+		</div>
+		<script>
+		
+		window.onload=function(){
+			var data = window.zfb.jsOnAndroidGetJsonData();
+			var jsonObj = JSON.parse(data);
+			//$("#cSkfyMcTop").text(jsonObj.CSkfyMc);
+			$("#cDzph").text(jsonObj.CDzph);
+			$("#cAjmc").text("案       名："+jsonObj.CAjmc);
+			$("#cAh").text("案       号："+jsonObj.CAh);
+			//$("#cSkfyMc").text("受理法院："+jsonObj.CSkfyMc);
+			//$("#cJflx").text("缴费类型："+jsonObj.CJflx);
+			$("#nYjssfje").text("合计(小写) "+jsonObj.NYjssfje+"元");
+			$("#jedx").text("合计(大写) "+jsonObj.CSjssfje);
+			$("#cJkrMc").text("应交费人："+jsonObj.CJkrMc);
+			var dCreate=jsonObj.DJkrq;
+			   var year = dCreate.substring(0,4);
+			   var month = dCreate.substring(5,7);
+			   var day = dCreate.substring(8,10);
+			   dCreate= year+"年"+month+"月"+day+"日";
+			$("#dJkrq").text("交费日期："+dCreate);
+		};
+		
+		$(function(){
+			$("#jfcgArrow").click(function(){
+		      window.zfb.clickOnAndroid("xzjf.html");
+		      
+		   })
+		});
+
+		</script>
+	</body>
+</html>

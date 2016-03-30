@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/common_header"
+        layout="@layout/common_header" />
+
+    <include
+        android:id="@+id/search_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/common_header"
+        layout="@layout/search_element" />
+
+    <FrameLayout
+        android:id="@+id/layout_center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/switch_tab"
+        android:layout_below="@+id/search_element" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/switch_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/switch_tab_parent_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/list_item_bg_sel"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <include layout="@layout/switch_two_tabs" />
+    </LinearLayout>
+
+</RelativeLayout>

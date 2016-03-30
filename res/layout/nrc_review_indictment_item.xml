@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:paddingTop="@dimen/nrc_review_basic_margin"
+    android:paddingBottom="@dimen/nrc_review_basic_margin"
+    android:orientation="vertical"
+    android:background="@drawable/corner_nrc_litigant_item_bg">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/nrc_review_basic_margin"
+        android:paddingRight="@dimen/nrc_review_basic_margin"
+		android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView 
+            android:id="@+id/indictment_name"
+            style="@style/text_nrc_review_main"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="张三诉李四的起诉状"/>
+        <TextView 
+            android:id="@+id/indictment_plaintiff"
+            style="@style/text_nrc_review_assist"
+            android:layout_marginTop="@dimen/nrc_review_small_margin"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="原告：张三"/>
+        <TextView 
+            android:id="@+id/indictment_defendant"
+            style="@style/text_nrc_review_assist"
+            android:layout_marginTop="@dimen/nrc_review_small_margin"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="被告：李四"/>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_color_gray" />
+    
+    <com.thunisoft.sswy.mobile.view.NoScrollListView
+        android:id="@+id/indictment_image"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"/>
+
+</LinearLayout>

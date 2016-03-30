@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <LinearLayout
+        
+        android:id="@+id/lawyer_qr_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" 
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_page_padding"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            style="@style/list_item_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height" >
+
+            <TextView
+                style="@style/list_item_text_tint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/text_xm" />
+
+            <TextView
+                android:id="@+id/tv_xm"
+                style="@style/list_item_text_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/list_item_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginTop="@dimen/list_item_big_space" >
+
+            <TextView
+                style="@style/list_item_text_tint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/text_sjh" />
+
+            <TextView
+                android:id="@+id/tv_sjhm"
+                style="@style/list_item_text_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/list_item_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginTop="@dimen/list_item_small_space" >
+
+            <TextView
+                android:id="@+id/tv_zjlx"
+                style="@style/list_item_text_tint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/text_sfz" />
+
+            <TextView
+                android:id="@+id/tv_sfz"
+                style="@style/list_item_text_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zyzh"
+            style="@style/list_item_default"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:layout_marginTop="@dimen/list_item_big_space"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/list_item_text_tint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/text_zyzh" />
+
+            <TextView
+                android:id="@+id/tv_zyzh"
+                style="@style/list_item_text_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list_rzjl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="normal_btn">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/normal_btn_font_size</item>
+    </style>
+    
+    <!-- 蓝色按钮 -->
+    <style name="normal_btn_blue" parent="@style/normal_btn">
+        <item name="android:background">@drawable/normal_btn_blue_selector</item>
+    </style>
+    <!-- 绿色按钮 -->
+    <style name="normal_btn_green" parent="@style/normal_btn">
+        <item name="android:background">@drawable/normal_btn_green_selector</item>
+    </style>
+    <!-- 褐色按钮 -->
+    <style name="normal_btn_brown" parent="@style/normal_btn">
+        <item name="android:background">@drawable/normal_btn_brown_selector</item>
+    </style>
+    <!-- 头部大文字 -->
+    <style name="head_text_big">
+        <item name="android:textSize">@dimen/head_big_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 头部小文字 -->
+    <style name="head_text_small">
+        <item name="android:textSize">@dimen/head_small_text_size</item>
+        <item name="android:textColor">@color/white_alpha</item>
+    </style>
+
+    <style name="head_text_default">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- 头像图片里的文字 -->
+    <style name="head_logo_text">
+        <item name="android:textSize">@dimen/head_log_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 我的诉讼已认证头像里的文字 -->
+    <style name="head_logo_text_wdss">
+        <item name="android:textSize">@dimen/head_small_text_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 列表样式 -->
+    <style name="list_item_default">
+        <item name="android:paddingLeft">@dimen/list_item_padding_left</item>
+        <item name="android:paddingRight">@dimen/list_item_padding_left</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/list_item_bg_selector</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="list_item_text_tint">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/list_item_text_tint</item>
+    </style>
+
+    <style name="list_item_text_dark">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/list_item_text_dark</item>
+    </style>
+    <!-- 提示性红色文字 -->
+    <style name="text_tip">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/bg_default</item>
+    </style>
+    <!-- 一般说明文字 -->
+    <style name="text_explanatory">
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@color/list_item_text_tint</item>
+    </style>
+    <!-- 送达信息 -->
+    <style name="text_sd_info">
+        <item name="android:textSize">@dimen/sd_info_text_size</item>
+        <item name="android:textColor">@color/tab_text_color_default</item>
+    </style>
+
+    <style name="input_default">
+        <item name="android:textSize">@dimen/default_input_text_size</item>
+        <item name="android:textColor">@color/list_item_text_dark</item>
+        <item name="android:textColorHint">@color/input_text_hint</item>
+    </style>
+    <style name="input_width_background" parent="@style/input_default">
+        <item name="android:background">@drawable/input_bg_selector</item>
+        <item name="android:paddingLeft">@dimen/input_padding</item>
+    </style>
+    <style name="input_single_line" parent="@style/input_width_background">
+        <item name="android:singleLine">true</item>
+    </style>
+    <!-- 弹出框定义 -->
+    <style name="custom_dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialog_text_title">
+        <item name="android:textSize">@dimen/dialog_title_text_size</item>
+        <item name="android:textColor">@color/dialog_text_title</item>
+    </style>
+
+    <style name="dialog_text_body">
+        <item name="android:textSize">@dimen/dialog_body_text_size</item>
+        <item name="android:textColor">@color/dialog_text_body</item>
+    </style>
+
+    <style name="dialog_text_sub_title">
+        <item name="android:textSize">@dimen/dialog_subtitle_text_size</item>
+        <item name="android:textColor">@color/dialog_text_body</item>
+    </style>
+
+    <style name="dialog_btn_text_positive">
+        <item name="android:textSize">@dimen/dialog_title_text_size</item>
+        <item name="android:textColor">@color/dialog_btn_border_blue</item>
+    </style>
+    <style name="dialog_btn_positive" parent="@style/dialog_btn_text_positive">
+        <item name="android:background">@drawable/dialog_btn_blue_bg_selector</item>
+    </style>
+    
+    <style name="btn_positive" parent="@style/dialog_btn_text_positive">
+        <item name="android:textSize">@dimen/default_input_text_size</item>
+        <item name="android:background">@drawable/dialog_btn_blue_bg_selector</item>
+    </style>
+
+    <style name="dialog_btn_text_negative">
+        <item name="android:textSize">@dimen/dialog_title_text_size</item>
+        <item name="android:textColor">@color/dialog_btn_border_dark</item>
+    </style>
+    <style name="dialog_btn_negative" parent="@style/dialog_btn_text_negative">
+        <item name="android:background">@drawable/dialog_btn_dark_bg_selector</item>
+    </style>
+    <style name="dialog_main">
+        <item name="android:paddingBottom">@dimen/dialog_small_space</item>
+        <item name="android:paddingLeft">@dimen/dialog_big_space</item>
+        <item name="android:paddingRight">@dimen/dialog_big_space</item>
+        <item name="android:paddingTop">@dimen/dialog_big_space</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    
+    <style name="dialog_outer">
+        <item name="android:paddingLeft">@dimen/dialog_out_padding</item>
+        <item name="android:paddingRight">@dimen/dialog_out_padding</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <style name="tab_center">
+        <item name="android:background">@drawable/tab_bg_selector</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textColor">@drawable/tab_text_color_selector</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="tab_content">
+        <item name="android:paddingBottom">@dimen/tab_content_padding_big</item>
+        <item name="android:paddingLeft">@dimen/tab_content_padding_small</item>
+        <item name="android:paddingRight">@dimen/tab_content_padding_small</item>
+    </style>
+    <style name="btn_red_arrow_right">
+        <item name="android:background">@drawable/court_select_ok_btn_bg</item>
+        <item name="android:textSize">@dimen/normal_btn_font_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="btn_text_red">
+        <item name="android:background">@drawable/corner_bg_white_selector</item>
+        <item name="android:textSize">@dimen/normal_btn_font_size</item>
+        <item name="android:textColor">@color/bg_default</item>
+    </style>
+    <style name="btn_text_gray">
+        <item name="android:background">@drawable/corner_bg_white_selector</item>
+        <item name="android:textSize">@dimen/normal_btn_font_size</item>
+        <item name="android:textColor">@color/dialog_text_body</item>
+    </style>
+    <style name="loading_page_title_text">
+        <item name="android:textColor">@color/white_alpha</item>
+        <item name="android:textSize">@dimen/loading_page_court_name_size</item>
+    </style>
+    <style name="standard_item_text_title">
+        <item name="android:textColor">@color/list_item_text_tint</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+    <style name="standard_item_text_content">
+        <item name="android:textColor">@color/input_text</item>
+        <item name="android:textSize">@dimen/standard_item_text_content_size</item>
+    </style>
+        <!-- 网上立案查看界面主说明文字 -->
+    <style name="text_nrc_review_main">
+        <item name="android:textSize">@dimen/nrc_review_main_text_size</item>
+        <item name="android:textColor">@color/text_nrc_review_main</item>
+    </style>
+        <!-- 网上立案查看界面副说明文字 -->
+    <style name="text_nrc_review_assist">
+        <item name="android:textSize">@dimen/nrc_review_assist_text_size</item>
+        <item name="android:textColor">@color/text_nrc_review_assist</item>
+    </style>
+        <!-- 网上立案查看界面阶段提示文字 -->
+    <style name="text_nrc_review_tab">
+        <item name="android:textSize">@dimen/nrc_review_tab_text_size</item>
+        <item name="android:textColor">@color/text_nrc_review_tab</item>
+    </style>
+    
+    
+</resources>

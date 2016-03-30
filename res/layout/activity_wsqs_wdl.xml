@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <TextView
+        android:id="@+id/tv_sm_qmm"
+        style="@style/text_explanatory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_page_padding"
+        android:layout_marginRight="@dimen/default_page_padding"
+        android:paddingBottom="@dimen/default_text_size"
+        android:paddingLeft="@dimen/default_page_padding"
+        android:paddingRight="@dimen/default_page_padding"
+        android:paddingTop="@dimen/default_text_size" />
+
+    <LinearLayout
+        style="@style/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_page_padding"
+        android:layout_marginRight="@dimen/default_page_padding"
+        android:background="@drawable/corner_bg_white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_page_padding" >
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/text_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="@dimen/input_height"
+            android:paddingLeft="@dimen/tab_content_padding_small"
+            android:paddingRight="@dimen/tab_content_padding_small" />
+
+        <EditText
+            android:id="@+id/tv_zjhm"
+            style="@style/input_width_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:hint="@string/text_zjhm" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/tv_qmm"
+            style="@style/input_width_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:hint="@string/text_qmm" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_qs"
+            style="@style/normal_btn_blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:text="@string/text_qs" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/text_explanatory"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ybsmwz_single_height"
+        android:layout_marginTop="@dimen/default_page_padding"
+        android:background="@color/list_item_bg_sel"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/default_page_padding"
+        android:paddingRight="0dp"
+        android:text="@string/text_yqsws" />
+
+    <ListView
+        android:id="@+id/list_ws"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_qb"
+        style="@style/dialog_btn_positive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:layout_marginLeft="@dimen/match_screen_btn_margin"
+        android:layout_marginRight="@dimen/match_screen_btn_margin"
+        android:layout_marginTop="@dimen/default_page_padding"
+        android:visibility="gone"
+        android:text="@string/text_qb" />
+
+</LinearLayout>

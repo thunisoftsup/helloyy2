@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/default_page_padding"
+            android:paddingRight="@dimen/default_page_padding" >
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/text_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:visibility="gone" />
+
+            <EditText
+                android:maxLength="20"
+                android:id="@+id/tv_yhm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_yhm"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:maxLength="20"
+                android:id="@+id/tv_mm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_mm_1"
+                android:inputType="textPassword" >
+            </EditText>
+
+            <EditText
+                android:maxLength="20"
+                android:id="@+id/tv_qrmm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_qrmm"
+                android:inputType="textPassword" >
+            </EditText>
+
+            <EditText
+                android:maxLength="10"
+                android:id="@+id/tv_zsxm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_zsxm"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/tv_xzzj"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_xzzj"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="text" >
+            </EditText>
+            
+            <EditText
+                android:maxLength="20"
+                android:id="@+id/tv_zjhm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_zjhm"
+                android:inputType="text" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:maxLength="11"
+                    android:id="@+id/tv_sjhm"
+                    style="@style/input_width_background"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_weight="5"
+                    android:hint="@string/text_sjhm" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/btn_send_yzm"
+                    style="@style/btn_positive"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginLeft="@dimen/default_page_padding"
+                    android:layout_weight="3"
+                    android:text="@string/text_hqyzm" />
+            </LinearLayout>
+
+            <EditText
+                android:maxLength="6"
+                android:id="@+id/tv_sjyzm"
+                style="@style/input_width_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:hint="@string/text_sjyzm"
+                android:inputType="text" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_page_padding" >
+
+                <CheckBox
+                    android:id="@+id/check_ty"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_wyydbty"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_sswywlptxy"
+                    android:textSize="15dp"
+                    android:textColor="@color/bg_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/text_sswywlptxy" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_xyb"
+                style="@style/btn_red_arrow_right"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginTop="@dimen/default_page_padding"
+                android:text="@string/text_xyb" 
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

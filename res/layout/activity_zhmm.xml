@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page_default"
+    android:orientation="vertical" >
+
+    <include layout="@layout/common_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/default_page_padding"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_page_padding"
+        android:paddingRight="@dimen/default_page_padding" >
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/text_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_page_padding" />
+
+        <EditText
+            android:maxLength="20"
+            android:id="@+id/tv_yhm"
+            style="@style/input_single_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:hint="@string/text_yhm" >
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:maxLength="11"
+                android:id="@+id/tv_sjhm"
+                style="@style/input_single_line"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_weight="5"
+                android:hint="@string/text_sjhm" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btn_send_yzm"
+                style="@style/btn_positive"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginLeft="@dimen/default_page_padding"
+                android:layout_weight="3"
+                android:text="@string/text_hqyzm" />
+        </LinearLayout>
+
+        <EditText
+            android:maxLength="6"
+            android:id="@+id/tv_yzm"
+            style="@style/input_single_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:hint="@string/text_dxyzm" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_xyb"
+            style="@style/normal_btn_blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_btn_height_1"
+            android:layout_marginTop="@dimen/default_page_padding"
+            android:gravity="center"
+            android:text="@string/text_xyb" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网上交费</title>
+		<link href="css/payment.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.js"></script>
+	</head>
+	<body>
+		<header>
+			<a class="arrow" id="jfsbArrow"></a>
+			<h2 class="topic">网上交费</h2>
+		</header>
+		<p class="false">交费失败，原因如下 ：</p>
+		<p class="cause">支付宝支付失败</p>
+		<div class="pattem">
+			<ul class="detail">				
+				<li id="cAjmc">案件名称：李小明诉王小二合同诈骗案</li>
+				<li id="cAh">案       号：2015朝初字第00002号</li>
+				<li id="cJflx">交费类型：受理费</li>
+				<li id="nYjssfje">交费金额：140元</li>
+				<li id="jedx">金额大写：壹佰肆拾圆</li>
+			</ul>
+			<div class="line"></div>
+			<div class="box">
+				<button class="update again" >重新交费</button>
+			</div>
+		</div>
+		
+		<div class="mask"></div>
+		<div class="pattem method">
+			
+			<img class="close" src="img/close.png">
+			<h3>请选择交费方式</h3>
+			<p id="cAm">河北向阳电子有限公司诉日本科技发展有限公司股权转让纠纷一案</p>
+			<div class="money" id="zffy">￥120.5元<span>受理费</span></div>
+
+			<div class="line"></div>
+			<dl class="mold" id="zfbNew">
+				<dd><img src="img/mold3.png"></dd> 
+				<dt>支付宝</dt>
+			</dl>
+		</div>
+		
+		<script>
+		
+		var cId  = "";
+        var moneyNum = "";
+        var moneyType = "";
+        var data = "";
+        var cAm = "";
+        
+		
+		window.onload=function(){
+			var dataNew = window.zfb.jsOnAndroidGetJsonData();
+			var jsonObj = JSON.parse(dataNew);
+			data = dataNew;
+			cId = jsonObj.CId;
+			moneyNum = jsonObj.NYjssfje;
+			moneyType = jsonObj.CJflx;
+			cAm = jsonObj.CAjmc;
+			$("#cAjmc").text("案       名："+jsonObj.CAjmc);
+			$("#cAh").text("案       号："+jsonObj.CAh);
+			$("#cJflx").text("交费类型："+jsonObj.CJflx);
+			$("#nYjssfje").text("合计(小写)："+jsonObj.NYjssfje+"元");
+			$("#jedx").text("合计(大写)："+jsonObj.CYjssfje);
+		};
+		
+		$(function(){
+			$("#jfsbArrow").click(function(){
+		      window.zfb.jsOnAndroidClose();
+		      
+		   })
+		});
+		
+		
+		$(function(){
+			$(".update").click(function(){
+				$(".mask").show();
+				$(".method").show();
+				$("#cAm").text(cAm);
+				$("#zffy").html(moneyNum+"元<span>"+moneyType+"</span>");
+		      
+		   })
+		});
+		
+		
+		$(function(){
+			$("#zfbNew").click(function(){	
+				window.zfb.jsOnAndroidPayAgain();
+				
+			});
+		});
+		
+		$(".close").click(function(){
+			$(".mask").hide();
+			$(".method").hide();
+		});
+
+		</script>
+	</body>
+</html>

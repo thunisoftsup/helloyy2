@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/nrc_review_basic_margin"
+    android:background="@drawable/corner_nrc_litigant_item_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/litigant_name"
+            style="@style/text_nrc_review_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="北京市某某股份有限公司" />
+
+        <TextView
+            android:id="@+id/litigant_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            android:layout_marginStart="@dimen/nrc_review_basic_margin"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/corner_nrc_litigant_type_bg"
+            android:layout_gravity="bottom"
+            android:includeFontPadding="false"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            android:textSize="8sp"
+            android:text="其他组织" />
+
+        <TextView
+            android:id="@+id/litigant_detail"
+            style="@style/text_nrc_review_assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            android:text="男  22岁" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/nrc_review_basic_margin"
+        android:background="#eeeeee" />
+    
+    <LinearLayout
+        android:id="@+id/litigant_card_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nrc_info_card" />
+
+        <TextView
+            android:id="@+id/litigant_card"
+            style="@style/text_nrc_review_assist"
+            android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="身份证：12321321321321" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/litigant_brithday_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nrc_info_brithday" />
+
+        <TextView
+            android:id="@+id/litigant_brithday"
+            style="@style/text_nrc_review_assist"
+            android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1993-01-11" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/litigant_phone_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nrc_info_phone" />
+
+        <TextView
+            android:id="@+id/litigant_phone"
+            style="@style/text_nrc_review_assist"
+            android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="13818181818" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/litigant_address_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nrc_info_address" />
+
+        <TextView
+            android:id="@+id/litigant_address"
+            style="@style/text_nrc_review_assist"
+            android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="北京市朝阳区" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/representative_info"
+        android:paddingTop="@dimen/nrc_review_basic_margin"
+        android:paddingBottom="@dimen/nrc_review_basic_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/representative_name"
+            style="@style/text_nrc_review_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="法定人代表：张三丰" />
+        
+        <LinearLayout
+        	android:id="@+id/representative_phone_info"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:gravity="center_vertical"
+        	android:orientation="horizontal" >
+
+        	<ImageView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:background="@drawable/nrc_info_phone" />
+
+        	<TextView
+            	android:id="@+id/representative_phone"
+            	style="@style/text_nrc_review_assist"
+            	android:layout_marginLeft="@dimen/nrc_review_basic_margin"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:text="13818181818" />
+    	</LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/head_wdss_tips_height"
+    android:layout_alignRight="@+id/tv_user_name"
+    android:layout_below="@+id/layout_button"
+    android:layout_marginRight="@dimen/head_wdss_tips_margin_right"
+    android:layout_marginTop="@dimen/head_wdss_tips_margin_top"
+    android:background="@drawable/tips"
+    android:paddingLeft="@dimen/head_wdss_tips_padding_left"
+    android:paddingRight="@dimen/head_wdss_tips_padding_left"
+    android:paddingTop="@dimen/head_wdss_tips_padding_top" >
+    <!-- android:layout_marginTop="@dimen/head_wdss_tips_margin_top" -->
+
+    <TextView
+        android:id="@+id/tv_aj_number"
+        style="@style/head_logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_zero" />
+
+    <TextView
+        style="@style/head_logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_aj_number_tips" />
+
+</LinearLayout>

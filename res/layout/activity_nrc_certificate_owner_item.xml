@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/nrc_coi_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="left|center_vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/nrc_coi_upload_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/nrc_coi_upload_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未上传" />
+
+        <View
+            android:layout_width="@dimen/nrc_right_arrow_width"
+            android:layout_height="@dimen/nrc_right_arrow_height"
+            android:background="@drawable/arrow_right_black" />
+    </LinearLayout>
+
+</LinearLayout>
